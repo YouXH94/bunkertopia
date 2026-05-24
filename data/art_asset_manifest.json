@@ -899,6 +899,253 @@
       ],
       "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
       "style": "ai_target_preview"
+    },
+    "bunker_entrance": {
+      "path": "res://assets/art/objects/generated/bunker_entrance.png",
+      "size": [
+        173,
+        123
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "lab_wall_panel": {
+      "path": "res://assets/art/objects/generated/lab_wall_panel.png",
+      "size": [
+        85,
+        86
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "lab_wall_pipes": {
+      "path": "res://assets/art/objects/generated/lab_wall_pipes.png",
+      "size": [
+        85,
+        86
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "lab_wall_warning": {
+      "path": "res://assets/art/objects/generated/lab_wall_warning.png",
+      "size": [
+        85,
+        86
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "supercomputer": {
+      "path": "res://assets/art/objects/generated/supercomputer.png",
+      "size": [
+        179,
+        122
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "bunker_bed": {
+      "path": "res://assets/art/objects/generated/bunker_bed.png",
+      "size": [
+        111,
+        73
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "rusty_table": {
+      "path": "res://assets/art/objects/generated/rusty_table.png",
+      "size": [
+        99,
+        65
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "lab_desk": {
+      "path": "res://assets/art/objects/generated/lab_desk.png",
+      "size": [
+        99,
+        63
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "rusty_locker": {
+      "path": "res://assets/art/objects/generated/rusty_locker.png",
+      "size": [
+        65,
+        102
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "metal_shelf": {
+      "path": "res://assets/art/objects/generated/metal_shelf.png",
+      "size": [
+        91,
+        87
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "metal_chair": {
+      "path": "res://assets/art/objects/generated/metal_chair.png",
+      "size": [
+        54,
+        62
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "supercomputer_screen_frame_00": {
+      "path": "res://assets/art/objects/generated/supercomputer_screen_frame_00.png",
+      "size": [
+        64,
+        48
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "supercomputer_screen_frame_01": {
+      "path": "res://assets/art/objects/generated/supercomputer_screen_frame_01.png",
+      "size": [
+        64,
+        48
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "supercomputer_screen_frame_02": {
+      "path": "res://assets/art/objects/generated/supercomputer_screen_frame_02.png",
+      "size": [
+        64,
+        48
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "supercomputer_screen_frame_03": {
+      "path": "res://assets/art/objects/generated/supercomputer_screen_frame_03.png",
+      "size": [
+        64,
+        48
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "supercomputer_screen_frame_04": {
+      "path": "res://assets/art/objects/generated/supercomputer_screen_frame_04.png",
+      "size": [
+        64,
+        48
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "supercomputer_screen_frame_05": {
+      "path": "res://assets/art/objects/generated/supercomputer_screen_frame_05.png",
+      "size": [
+        64,
+        48
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "supercomputer_screen_frame_06": {
+      "path": "res://assets/art/objects/generated/supercomputer_screen_frame_06.png",
+      "size": [
+        64,
+        48
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "supercomputer_screen_frame_07": {
+      "path": "res://assets/art/objects/generated/supercomputer_screen_frame_07.png",
+      "size": [
+        64,
+        48
+      ],
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "style": "procedural_lab_interior"
     }
   },
   "tiles": {
@@ -943,6 +1190,30 @@
         64,
         64
       ]
+    },
+    "lab_floor": {
+      "path": "res://assets/art/tiles/generated/lab_floor.png",
+      "size": [
+        64,
+        64
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "lab_floor_grate": {
+      "path": "res://assets/art/tiles/generated/lab_floor_grate.png",
+      "size": [
+        64,
+        64
+      ],
+      "style": "procedural_lab_interior"
+    },
+    "lab_floor_cable": {
+      "path": "res://assets/art/tiles/generated/lab_floor_cable.png",
+      "size": [
+        64,
+        64
+      ],
+      "style": "procedural_lab_interior"
     }
   },
   "ui_icons": {
@@ -1161,5 +1432,26 @@
     "res://assets/art/source/generated_raw/characters_walk_contact_sheet.png",
     "res://assets/art/source/generated_raw/core_objects_contact_sheet.png",
     "res://assets/art/source/generated_raw/ui_icons_contact_sheet.png"
-  ]
+  ],
+  "animations": {
+    "supercomputer_screen": {
+      "frames": [
+        "res://assets/art/objects/generated/supercomputer_screen_frame_00.png",
+        "res://assets/art/objects/generated/supercomputer_screen_frame_01.png",
+        "res://assets/art/objects/generated/supercomputer_screen_frame_02.png",
+        "res://assets/art/objects/generated/supercomputer_screen_frame_03.png",
+        "res://assets/art/objects/generated/supercomputer_screen_frame_04.png",
+        "res://assets/art/objects/generated/supercomputer_screen_frame_05.png",
+        "res://assets/art/objects/generated/supercomputer_screen_frame_06.png",
+        "res://assets/art/objects/generated/supercomputer_screen_frame_07.png"
+      ],
+      "sheet": "res://assets/art/objects/animations/supercomputer_screen_sheet.png",
+      "frame_size": [
+        64,
+        48
+      ],
+      "fps": 6,
+      "style": "procedural_lab_interior"
+    }
+  }
 }
