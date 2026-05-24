@@ -69,9 +69,30 @@ func show_report(report: Dictionary) -> void:
 		report.get("wall_integrity", 0),
 		report.get("base_integrity", 0)
 	]
+	var destroyed: Array = report.get("building_destroyed", [])
+	if not destroyed.is_empty():
+		body += "\n建筑损毁：" + ", ".join(destroyed)
+	body += "\n农田损失：%d   畜舍损失：%d   弹药浪费：%d" % [
+		report.get("farm_loss", 0),
+		report.get("animal_loss", 0),
+		report.get("ammo_waste", 0)
+	]
+	var power: Dictionary = report.get("power_report", {})
+	if not power.is_empty():
+		body += "\n电力复盘：发电 %d / 耗电 %d / 电池 %d / 过载 %d / 城市电网 %d%%" % [
+			power.get("generation", 0),
+			power.get("consumption", 0),
+			power.get("storage", 0),
+			power.get("overload", 0),
+			power.get("city_grid_power", 0)
+		]
+	body += "\n策略提示：" + str(report.get("weak_path_hint", "防线仍需观察。"))
 	if int(report.get("sample_reward", 0)) > 0:
 		body += "\n回收感染样本 +" + str(report.get("sample_reward", 0))
-	show_event("黎明战报", body, [{"text": "返回基地", "action": "go_base"}])
+	var options := [{"text": "返回基地", "action": "go_base"}]
+	if bool(report.get("demo_completed", false)):
+		options = [{"text": "查看 Demo 结算", "action": "demo_complete"}]
+	show_event("黎明战报", body, options)
 
 
 func hide_popup() -> void:
@@ -99,6 +120,7 @@ func _set_options(options: Array) -> void:
 
 
 func _on_option_pressed(option) -> void:
+	AudioManager.play_ui()
 	hide_popup()
 	if typeof(option) != TYPE_DICTIONARY:
 		return
@@ -113,6 +135,8 @@ func _on_option_pressed(option) -> void:
 		SceneRouter.go_city()
 	elif action == "go_night":
 		SceneRouter.go_night()
+	elif action == "demo_complete":
+		EventBus.request_demo_complete("撑过第 3 夜", "尸潮在黎明前散开。地堡还站着，实验室还有电，农田也没有完全死透。Steam Demo 到这里完成。")
 
 
 func _format_dict(values: Dictionary) -> String:

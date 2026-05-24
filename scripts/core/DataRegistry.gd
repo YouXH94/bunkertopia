@@ -1,6 +1,8 @@
 extends Node
 
 var data := {}
+var defense_data := {}
+var item_data := {}
 
 
 func _ready() -> void:
@@ -17,6 +19,20 @@ func _ready() -> void:
 		return
 
 	data = parsed
+	defense_data = _load_json("res://data/defense_buildings.json")
+	item_data = _load_json("res://data/items_recipes.json")
+
+
+func _load_json(path: String) -> Dictionary:
+	var file := FileAccess.open(path, FileAccess.READ)
+	if file == null:
+		push_error("Missing data file: " + path)
+		return {}
+	var parsed = JSON.parse_string(file.get_as_text())
+	if typeof(parsed) != TYPE_DICTIONARY:
+		push_error(path + " is not a dictionary.")
+		return {}
+	return parsed
 
 
 func get_research_projects() -> Array:
@@ -51,3 +67,29 @@ func get_zombie(zombie_id: String) -> Dictionary:
 
 func get_event(event_id: String) -> Dictionary:
 	return data.get("events", {}).get(event_id, {})
+
+
+func get_defense_buildings() -> Array:
+	return defense_data.get("buildings", [])
+
+
+func get_defense_building(building_id: String) -> Dictionary:
+	for building in get_defense_buildings():
+		if building.get("id", "") == building_id:
+			return building
+	return {}
+
+
+func get_recipes() -> Array:
+	return item_data.get("recipes", [])
+
+
+func get_recipe(recipe_id: String) -> Dictionary:
+	for recipe in get_recipes():
+		if recipe.get("id", "") == recipe_id:
+			return recipe
+	return {}
+
+
+func get_items() -> Dictionary:
+	return item_data.get("items", {})

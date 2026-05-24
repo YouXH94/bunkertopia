@@ -11,3 +11,6 @@
 
 # Local runtime logs
 /tmp/
+
+# Local export outputs
+build/

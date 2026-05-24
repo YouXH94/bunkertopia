@@ -41,6 +41,7 @@ func _try_fire() -> void:
 
 	target.take_damage(damage)
 	GameState.apply_resource_delta({"ammo": -1}, "turret_fire")
+	AudioManager.play_sfx("turret")
 	shot_target = to_local(target.global_position)
 	shot_timer = 0.08
 	cooldown = fire_interval

@@ -1,0 +1,29 @@
+{
+  "items": {
+    "scrap": "废铁",
+    "wood": "木材",
+    "cloth": "布料",
+    "wire": "电线",
+    "electronics": "电子元件",
+    "chemicals": "化学品",
+    "seeds": "种子",
+    "raw_food": "生食",
+    "medicine": "药品",
+    "books": "书本",
+    "iron_ingot": "铁块",
+    "screws": "螺丝",
+    "circuit_board": "电路板",
+    "battery_cell": "电池芯",
+    "fertilizer": "肥料",
+    "animal_feed": "饲料"
+  },
+  "recipes": [
+    {"id": "smelt_ingot", "name": "熔炼铁块", "facility": "furnace", "skill": "engineering", "time": 8, "power": 0, "fuel": 1, "success": 0.82, "inputs": {"scrap": 5}, "outputs": {"iron_ingot": 2}, "xp": 14},
+    {"id": "make_screws", "name": "制作螺丝", "facility": "workbench", "skill": "engineering", "time": 5, "power": 1, "fuel": 0, "success": 0.88, "inputs": {"iron_ingot": 1}, "outputs": {"screws": 4}, "xp": 10},
+    {"id": "wire_board", "name": "拼接电路板", "facility": "workbench", "skill": "engineering", "time": 7, "power": 2, "fuel": 0, "success": 0.74, "inputs": {"wire": 2, "electronics": 2}, "outputs": {"circuit_board": 1}, "xp": 16},
+    {"id": "battery_cells", "name": "制作电池芯", "facility": "workbench", "skill": "engineering", "time": 7, "power": 2, "fuel": 0, "success": 0.72, "inputs": {"electronics": 1, "chemicals": 1, "scrap": 2}, "outputs": {"battery_cell": 2}, "xp": 16},
+    {"id": "fertilizer", "name": "堆肥", "facility": "farm_plot", "skill": "agriculture", "time": 6, "power": 0, "fuel": 0, "success": 0.90, "inputs": {"raw_food": 2, "chemicals": 1}, "outputs": {"fertilizer": 2}, "xp": 12},
+    {"id": "animal_feed", "name": "调制饲料", "facility": "animal_pen", "skill": "husbandry", "time": 5, "power": 0, "fuel": 0, "success": 0.90, "inputs": {"raw_food": 2, "seeds": 1}, "outputs": {"animal_feed": 3}, "xp": 12},
+    {"id": "sample_reagent", "name": "样本试剂", "facility": "lab_station", "skill": "biology", "time": 9, "power": 3, "fuel": 0, "success": 0.80, "inputs": {"chemicals": 2, "medicine": 1}, "outputs": {"circuit_board": 1}, "xp": 18}
+  ]
+}

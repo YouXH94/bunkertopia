@@ -21,6 +21,11 @@ EventBus="*res://scripts/core/EventBus.gd"
 GameState="*res://scripts/core/GameState.gd"
 DataRegistry="*res://scripts/core/DataRegistry.gd"
 SceneRouter="*res://scripts/core/SceneRouter.gd"
+SaveManager="*res://scripts/core/SaveManager.gd"
+AudioManager="*res://scripts/core/AudioManager.gd"
+PowerSystem="*res://scripts/systems/PowerSystem.gd"
+CraftingSystem="*res://scripts/systems/CraftingSystem.gd"
+SkillSystem="*res://scripts/systems/SkillSystem.gd"
 
 [display]
 

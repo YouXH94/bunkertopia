@@ -73,50 +73,54 @@
     {
       "id": "pharmacy",
       "name": "废弃药房",
-      "loot": {"samples": [1, 3], "water": [1, 2]},
+      "loot": {"samples": [1, 3], "water": [1, 2], "medicine": [0, 1], "chemicals": [1, 2], "books": [0, 1]},
       "risk": 5,
       "event": "药房冷柜里还有半支变质疫苗，值得拿回实验室。"
     },
     {
       "id": "market",
       "name": "便利店货架",
-      "loot": {"food": [4, 9], "water": [2, 5], "fuel": [0, 1]},
+      "loot": {"food": [4, 9], "water": [2, 5], "fuel": [0, 1], "cloth": [1, 3], "raw_food": [1, 3], "seeds": [0, 2]},
       "risk": 3,
       "event": "货架后面有被撕开的急救包，还有几罐过期罐头。"
     },
     {
       "id": "crash_cargo",
       "name": "坠机货箱",
-      "loot": {"parts": [5, 10], "ammo": [4, 8], "fuel": [1, 2]},
+      "loot": {"parts": [5, 10], "ammo": [4, 8], "fuel": [1, 2], "scrap": [5, 10], "wire": [1, 3], "electronics": [0, 2]},
       "risk": 4,
       "event": "坠机货箱的航空铝还能用，油味也还没散。"
     },
     {
       "id": "police_car",
       "name": "警车后备箱",
-      "loot": {"ammo": [6, 12], "samples": [0, 1]},
+      "loot": {"ammo": [6, 12], "samples": [0, 1], "scrap": [2, 5], "medicine": [0, 1]},
       "risk": 7,
       "event": "警车里传出敲击声，你抢在它爬出来前拿走了弹药。"
     },
     {
       "id": "apartment",
       "name": "倒塌公寓",
-      "loot": {"food": [2, 5], "parts": [3, 6], "water": [1, 2]},
+      "loot": {"food": [2, 5], "parts": [3, 6], "water": [1, 2], "wood": [3, 7], "cloth": [1, 4], "books": [0, 1]},
       "risk": 6,
       "event": "公寓楼梯断了半截，背包变沉，呼吸也变重。"
     },
     {
       "id": "lab_van",
       "name": "流动实验车",
-      "loot": {"samples": [2, 4], "power": [1, 3], "parts": [2, 5]},
+      "loot": {"samples": [2, 4], "power": [1, 3], "parts": [2, 5], "chemicals": [1, 3], "electronics": [1, 3], "wire": [1, 4]},
       "risk": 8,
       "event": "实验车记录仪还亮着，屏幕上停在感染曲线的峰值。"
     }
   ],
   "zombies": [
-    {"id": "walker", "name": "行尸", "health": 22, "speed": 38, "damage": 4, "reward_samples": 1},
-    {"id": "runner", "name": "奔跑者", "health": 16, "speed": 66, "damage": 3, "reward_samples": 1},
-    {"id": "brute", "name": "臃肿体", "health": 48, "speed": 25, "damage": 9, "reward_samples": 2}
+    {"id": "walker", "name": "行尸", "health": 24, "speed": 40, "damage": 4, "building_damage": 5, "target_priority": ["bunker_core", "farm_plot"], "armor": 0.0, "fire_weakness": 1.0, "reward_samples": 1, "spawn_weight": 38},
+    {"id": "runner", "name": "奔跑者", "health": 16, "speed": 76, "damage": 3, "building_damage": 3, "target_priority": ["animal_pen", "bunker_core"], "armor": 0.0, "fire_weakness": 1.0, "reward_samples": 1, "spawn_weight": 18},
+    {"id": "brute", "name": "臃肿体", "health": 58, "speed": 28, "damage": 7, "building_damage": 12, "target_priority": ["scrap_wall", "barricade", "bunker_core"], "armor": 0.15, "fire_weakness": 1.1, "reward_samples": 2, "spawn_weight": 12},
+    {"id": "crusher", "name": "破墙者", "health": 72, "speed": 24, "damage": 8, "building_damage": 20, "target_priority": ["scrap_wall", "gate", "bunker_core"], "armor": 0.20, "fire_weakness": 1.0, "reward_samples": 2, "spawn_weight": 7},
+    {"id": "crawler", "name": "爬行群", "health": 9, "speed": 58, "damage": 2, "building_damage": 2, "target_priority": ["farm_plot", "bunker_core"], "armor": 0.0, "fire_weakness": 1.25, "reward_samples": 0, "spawn_weight": 18},
+    {"id": "fire_weak_infected", "name": "易燃感染体", "health": 30, "speed": 42, "damage": 5, "building_damage": 5, "target_priority": ["animal_pen", "bunker_core"], "armor": 0.0, "fire_weakness": 1.8, "reward_samples": 1, "spawn_weight": 9},
+    {"id": "armored", "name": "装甲感染体", "health": 46, "speed": 34, "damage": 5, "building_damage": 8, "target_priority": ["turret", "bunker_core"], "armor": 0.45, "fire_weakness": 1.35, "pierce_weakness": 1.4, "reward_samples": 2, "spawn_weight": 6}
   ],
   "events": {
     "opening": {

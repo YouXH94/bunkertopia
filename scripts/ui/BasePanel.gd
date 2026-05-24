@@ -14,6 +14,7 @@ func _ready() -> void:
 
 func open() -> void:
 	visible = true
+	AudioManager.play_ui()
 	_refresh()
 
 
@@ -129,6 +130,7 @@ func _try_build(option_id: String) -> void:
 		return
 	if not GameState.spend(selected.get("cost", {}), "base_build"):
 		EventBus.announce_notice("资源不足，无法执行。")
+		AudioManager.play_sfx("fail")
 		return
 
 	var effect: Dictionary = selected.get("effect", {})
@@ -138,7 +140,9 @@ func _try_build(option_id: String) -> void:
 		GameState.add_power(int(effect["power"]))
 	if effect.has("turret_ready"):
 		GameState.turret_ready = true
+		GameState.mark_tutorial_flag("loaded_turret")
 	EventBus.announce_notice("基地维护完成：" + str(selected.get("name", "")))
+	AudioManager.play_sfx("pickup")
 	_refresh()
 
 

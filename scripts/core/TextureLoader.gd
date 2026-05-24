@@ -2,9 +2,10 @@ extends RefCounted
 
 
 static func load_texture(path: String) -> Texture2D:
-	var texture := ResourceLoader.load(path, "Texture2D", ResourceLoader.CACHE_MODE_REUSE)
-	if texture is Texture2D:
-		return texture
+	if ResourceLoader.exists(path, "Texture2D"):
+		var texture := ResourceLoader.load(path, "Texture2D", ResourceLoader.CACHE_MODE_REUSE)
+		if texture is Texture2D:
+			return texture
 
 	var bytes := FileAccess.get_file_as_bytes(ProjectSettings.globalize_path(path))
 	if bytes.is_empty():

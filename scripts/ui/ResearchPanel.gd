@@ -15,6 +15,7 @@ func _ready() -> void:
 
 func open() -> void:
 	visible = true
+	AudioManager.play_ui()
 	_refresh()
 
 
@@ -148,6 +149,7 @@ func _try_project(project_id: String) -> void:
 	var body_cost: Dictionary = project.get("body_cost", {})
 	if not GameState.can_afford(cost) or not GameState.body_can_pay(body_cost):
 		EventBus.announce_notice("研究条件不足。")
+		AudioManager.play_sfx("fail")
 		return
 	if not GameState.spend(cost, "research"):
 		return
@@ -158,6 +160,7 @@ func _try_project(project_id: String) -> void:
 	GameState.apply_body_delta(body_delta)
 	GameState.add_research_progress(float(project.get("progress", 0)), project_id)
 	EventBus.announce_event("研究推进：" + str(project.get("name", "")), str(project.get("description", "")) + "\n\n解药研究进度提升。")
+	AudioManager.play_sfx("research")
 	_refresh()
 
 
