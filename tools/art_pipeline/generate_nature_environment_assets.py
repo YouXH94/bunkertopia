@@ -65,31 +65,26 @@ ATLASES = {
         ],
     },
     "nature_atlas": {
-        "source": RAW / "imagegen_nature_atlas_source.png",
+        "source": RAW / "imagegen_nature_scaled_atlas_source.png",
         "output": TILES / "nature_atlas.png",
-        "columns": 5,
-        "rows": 4,
+        "columns": 6,
+        "rows": 5,
         "tiles": [
-            "dead_tree",
-            "pine_tree",
-            "bent_tree",
-            "tree_stump",
-            "fallen_log",
-            "large_bush",
-            "small_bush",
-            "dry_grass",
-            "wild_grass",
-            "dead_flowers",
-            "rock_cluster",
-            "mossy_rock",
-            "mud_pit",
-            "cracked_soil",
-            "root_cluster",
-            "grass_variant_a",
-            "grass_variant_b",
-            "flower_variant",
-            "sapling",
-            "scrub_patch",
+            {"id": "large_dead_tree", "coord": [0, 0], "size": [2, 3]},
+            {"id": "large_pine_tree", "coord": [2, 0], "size": [2, 3]},
+            {"id": "large_bent_tree", "coord": [4, 0], "size": [2, 3]},
+            {"id": "large_bush", "coord": [0, 3], "size": [1, 1]},
+            {"id": "small_bush", "coord": [1, 3], "size": [1, 1]},
+            {"id": "dry_grass", "coord": [2, 3], "size": [1, 1]},
+            {"id": "wild_grass", "coord": [3, 3], "size": [1, 1]},
+            {"id": "dead_flowers", "coord": [4, 3], "size": [1, 1]},
+            {"id": "rock_cluster", "coord": [5, 3], "size": [1, 1]},
+            {"id": "mossy_rock", "coord": [0, 4], "size": [1, 1]},
+            {"id": "tree_stump", "coord": [1, 4], "size": [1, 1]},
+            {"id": "fallen_log", "coord": [2, 4], "size": [1, 1]},
+            {"id": "mud_pit", "coord": [3, 4], "size": [1, 1]},
+            {"id": "cracked_soil", "coord": [4, 4], "size": [1, 1]},
+            {"id": "root_cluster", "coord": [5, 4], "size": [1, 1]},
         ],
     },
 }
@@ -134,9 +129,22 @@ def choose_grid_runs(image: Image.Image, columns: int, rows: int) -> tuple[list[
             f"Could not detect atlas gutters in {image.size}: "
             f"vertical={vertical}, horizontal={horizontal}"
         )
-    vertical = vertical[: columns + 1]
-    horizontal = horizontal[: rows + 1]
-    return vertical, horizontal
+    return (
+        choose_expected_grid_lines(vertical, image.width, columns),
+        choose_expected_grid_lines(horizontal, image.height, rows),
+    )
+
+
+def choose_expected_grid_lines(runs: list[tuple[int, int]], length: int, cells: int) -> list[tuple[int, int]]:
+    selected: list[tuple[int, int]] = []
+    remaining = runs.copy()
+    for index in range(cells + 1):
+        target = 0 if index == 0 else length - 1 if index == cells else round(length * index / cells)
+        run = min(remaining, key=lambda candidate: abs(((candidate[0] + candidate[1]) / 2) - target))
+        selected.append(run)
+        remaining.remove(run)
+    selected.sort(key=lambda run: run[0])
+    return selected
 
 
 def extract_cells(source_path: Path, columns: int, rows: int) -> list[Image.Image]:

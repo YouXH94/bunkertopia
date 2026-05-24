@@ -65,7 +65,30 @@ const PRIORITY_TILE_ASSETS := [
 const ATLAS_TILE_ASSETS := [
 	{"id": "stone_road_atlas", "path": "res://assets/art/tiles/generated/stone_road_atlas.png", "tile_size": [64, 64], "columns": 4, "rows": 4},
 	{"id": "mountain_atlas", "path": "res://assets/art/tiles/generated/mountain_atlas.png", "tile_size": [64, 64], "columns": 4, "rows": 4},
-	{"id": "nature_atlas", "path": "res://assets/art/tiles/generated/nature_atlas.png", "tile_size": [64, 64], "columns": 5, "rows": 4},
+	{
+		"id": "nature_atlas",
+		"path": "res://assets/art/tiles/generated/nature_atlas.png",
+		"tile_size": [64, 64],
+		"columns": 6,
+		"rows": 5,
+		"tiles": [
+			{"coord": [0, 0], "size": [2, 3]},
+			{"coord": [2, 0], "size": [2, 3]},
+			{"coord": [4, 0], "size": [2, 3]},
+			{"coord": [0, 3], "size": [1, 1]},
+			{"coord": [1, 3], "size": [1, 1]},
+			{"coord": [2, 3], "size": [1, 1]},
+			{"coord": [3, 3], "size": [1, 1]},
+			{"coord": [4, 3], "size": [1, 1]},
+			{"coord": [5, 3], "size": [1, 1]},
+			{"coord": [0, 4], "size": [1, 1]},
+			{"coord": [1, 4], "size": [1, 1]},
+			{"coord": [2, 4], "size": [1, 1]},
+			{"coord": [3, 4], "size": [1, 1]},
+			{"coord": [4, 4], "size": [1, 1]},
+			{"coord": [5, 4], "size": [1, 1]},
+		],
+	},
 ]
 
 
@@ -135,6 +158,15 @@ func _texture_region_size(asset: Dictionary, texture: Texture2D) -> Vector2i:
 func _create_tiles(source: TileSetAtlasSource, asset: Dictionary, texture: Texture2D) -> void:
 	if not asset.has("tile_size"):
 		source.create_tile(Vector2i.ZERO)
+		return
+	if asset.has("tiles"):
+		for tile: Dictionary in asset["tiles"]:
+			var coord: Array = tile.get("coord", [0, 0])
+			var size: Array = tile.get("size", [1, 1])
+			source.create_tile(
+				Vector2i(int(coord[0]), int(coord[1])),
+				Vector2i(int(size[0]), int(size[1]))
+			)
 		return
 	var tile_size: Vector2i = _texture_region_size(asset, texture)
 	var texture_size := texture.get_size()
