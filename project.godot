@@ -13,13 +13,14 @@ config_version=5
 config/name="Bunkertopia"
 run/main_scene="res://scenes/main/Main.tscn"
 config/features=PackedStringArray("4.6")
-config/icon="res://assets/art/ui/icon.png"
+config/icon="res://assets/art/ui/generated/icon.png"
 
 [autoload]
 
 EventBus="*res://scripts/core/EventBus.gd"
 GameState="*res://scripts/core/GameState.gd"
 DataRegistry="*res://scripts/core/DataRegistry.gd"
+ArtRegistry="*res://scripts/core/ArtRegistry.gd"
 SceneRouter="*res://scripts/core/SceneRouter.gd"
 SaveManager="*res://scripts/core/SaveManager.gd"
 AudioManager="*res://scripts/core/AudioManager.gd"

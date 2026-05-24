@@ -117,7 +117,7 @@ func _make_resource_chip(key: String, display_name: String) -> PanelContainer:
 	chip.add_child(row)
 
 	var icon := TextureRect.new()
-	icon.texture = TextureLoader.load_texture("res://assets/art/ui/icon_%s.png" % key)
+	icon.texture = TextureLoader.load_texture(ArtRegistry.icon_path(key, "res://assets/art/ui/icon_%s.png" % key))
 	icon.custom_minimum_size = Vector2(22, 22)
 	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED

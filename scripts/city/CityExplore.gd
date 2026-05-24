@@ -11,8 +11,8 @@ var player: CharacterBody2D
 
 
 func _ready() -> void:
-	road_texture = TextureLoader.load_texture("res://assets/art/tiles/cracked_road.png")
-	ground_texture = TextureLoader.load_texture("res://assets/art/tiles/dark_ground.png")
+	road_texture = TextureLoader.load_texture(ArtRegistry.tile_path("cracked_road", "res://assets/art/tiles/cracked_road.png"))
+	ground_texture = TextureLoader.load_texture(ArtRegistry.tile_path("dark_ground", "res://assets/art/tiles/dark_ground.png"))
 	_spawn_player()
 	_build_city()
 	_create_search_points()
@@ -49,16 +49,16 @@ func _build_city() -> void:
 	queue_redraw()
 	_add_boundary_collisions()
 	for pos in [Vector2(160, 165), Vector2(360, 145), Vector2(840, 155), Vector2(1060, 180), Vector2(260, 520), Vector2(970, 535)]:
-		_add_solid_sprite("res://assets/art/objects/ruined_building.png", pos, Vector2(2.0, 2.0), 1, Vector2(150, 150), Vector2(0, 18))
+		_add_solid_sprite(ArtRegistry.object_path("ruined_building", "res://assets/art/objects/ruined_building.png"), pos, Vector2(0.90, 0.90), 1, Vector2(150, 150), Vector2(0, 18))
 
 	for pos in [Vector2(520, 340), Vector2(740, 315), Vector2(1110, 410)]:
-		_add_solid_sprite("res://assets/art/objects/rubble.png", pos, Vector2(1.7, 1.7), 2, Vector2(86, 62), Vector2(0, 10))
+		_add_solid_sprite(ArtRegistry.object_path("rubble", "res://assets/art/objects/rubble.png"), pos, Vector2(0.78, 0.78), 2, Vector2(86, 62), Vector2(0, 10))
 
 	for pos in [Vector2(330, 365), Vector2(890, 365)]:
-		_add_solid_sprite("res://assets/art/objects/wrecked_car.png", pos, Vector2(1.7, 1.7), 2, Vector2(112, 48), Vector2(0, 8))
+		_add_solid_sprite(ArtRegistry.object_path("wrecked_car", "res://assets/art/objects/wrecked_car.png"), pos, Vector2(0.78, 0.78), 2, Vector2(112, 48), Vector2(0, 8))
 
-	_add_solid_sprite("res://assets/art/objects/crash_plane.png", Vector2(1110, 610), Vector2(1.55, 1.55), 1, Vector2(148, 62), Vector2(0, 12))
-	_add_solid_sprite("res://assets/art/objects/city_gate.png", Vector2(90, 635), Vector2(1.5, 1.5), 3, Vector2(70, 82), Vector2(0, 8))
+	_add_solid_sprite(ArtRegistry.object_path("crash_plane", "res://assets/art/objects/crash_plane.png"), Vector2(1110, 610), Vector2(0.76, 0.76), 1, Vector2(148, 62), Vector2(0, 12))
+	_add_solid_sprite(ArtRegistry.object_path("gate", "res://assets/art/objects/city_gate.png"), Vector2(90, 635), Vector2(1.15, 1.15), 3, Vector2(70, 82), Vector2(0, 8))
 
 
 func _create_search_points() -> void:
@@ -76,7 +76,7 @@ func _create_search_points() -> void:
 		search.setup(containers[i])
 		search.position = positions[i]
 		search.radius = 50.0
-		search.set_marker("res://assets/art/objects/container.png", Vector2.ZERO)
+		search.set_marker(ArtRegistry.object_path("container", "res://assets/art/objects/container.png"), Vector2.ZERO)
 		add_child(search)
 		_add_solid_rect(positions[i] + Vector2(0, 10), Vector2(46, 34))
 

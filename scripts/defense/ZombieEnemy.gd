@@ -23,6 +23,12 @@ var attack_cooldown := 0.0
 var slow_multiplier := 1.0
 var slow_timer := 0.0
 var sprite: Sprite2D
+var frame_size := Vector2i(64, 64)
+var animation_time := 0.0
+var animation_name := "walk_down"
+var facing := "down"
+var hit_anim_timer := 0.0
+var attack_anim_timer := 0.0
 
 
 func setup(data: Dictionary, wall_segments: Array, bunker_position: Vector2) -> void:
@@ -60,14 +66,19 @@ func _ready() -> void:
 	add_child(shape)
 
 	sprite = Sprite2D.new()
+	var fallback := "res://assets/art/characters/zombie_walker.png"
 	if zombie_id == "runner":
-		sprite.texture = TextureLoader.load_texture("res://assets/art/characters/zombie_runner.png")
+		fallback = "res://assets/art/characters/zombie_runner.png"
 	elif zombie_id == "brute":
-		sprite.texture = TextureLoader.load_texture("res://assets/art/characters/zombie_brute.png")
-	else:
-		sprite.texture = TextureLoader.load_texture("res://assets/art/characters/zombie_walker.png")
+		fallback = "res://assets/art/characters/zombie_brute.png"
+	var sheet_path := ArtRegistry.character_sheet(zombie_id, fallback)
+	sprite.texture = TextureLoader.load_texture(sheet_path)
 	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-	sprite.position = Vector2(0, -8)
+	sprite.position = Vector2(0, -12)
+	if sheet_path.ends_with("_sheet.png"):
+		frame_size = ArtRegistry.character_frame_size(zombie_id)
+		sprite.region_enabled = true
+		sprite.region_rect = Rect2(Vector2.ZERO, Vector2(frame_size.x, frame_size.y))
 	add_child(sprite)
 	target_wall = _nearest_wall()
 
@@ -79,6 +90,8 @@ func _physics_process(delta: float) -> void:
 		slow_timer -= delta
 		if slow_timer <= 0.0:
 			slow_multiplier = 1.0
+	hit_anim_timer = max(0.0, hit_anim_timer - delta)
+	attack_anim_timer = max(0.0, attack_anim_timer - delta)
 
 	if not path_points.is_empty():
 		_follow_dynamic_path(delta)
@@ -95,12 +108,14 @@ func _physics_process(delta: float) -> void:
 	if distance > 42:
 		velocity = (target - global_position).normalized() * speed * slow_multiplier
 		move_and_slide()
-		if velocity.x != 0:
-			sprite.flip_h = velocity.x < 0
+		_update_facing(velocity)
+		_update_animation(delta, true)
 	else:
 		velocity = Vector2.ZERO
 		attack_cooldown -= delta
+		_update_animation(delta, false)
 		if attack_cooldown <= 0.0:
+			attack_anim_timer = 0.22
 			_attack_target()
 			attack_cooldown = 0.85
 
@@ -115,6 +130,7 @@ func take_damage(amount: int, damage_type: String = "normal") -> void:
 		final_amount = int(amount * (1.0 - armor))
 	final_amount = max(1, final_amount)
 	health -= final_amount
+	hit_anim_timer = 0.14
 	modulate = Color(1.0, 0.72, 0.72, 1.0)
 	var tween := create_tween()
 	tween.tween_property(self, "modulate", Color.WHITE, 0.08)
@@ -143,15 +159,17 @@ func _follow_dynamic_path(delta: float) -> void:
 	if distance > 16:
 		velocity = (target - global_position).normalized() * speed * slow_multiplier
 		move_and_slide()
-		if velocity.x != 0:
-			sprite.flip_h = velocity.x < 0
+		_update_facing(velocity)
+		_update_animation(delta, true)
 		return
 	if path_index < path_points.size() - 1:
 		path_index += 1
 		return
 	velocity = Vector2.ZERO
 	attack_cooldown -= delta
+	_update_animation(delta, false)
 	if attack_cooldown <= 0.0:
+		attack_anim_timer = 0.22
 		if target_building != null and is_instance_valid(target_building):
 			target_building.apply_damage(building_damage)
 		else:
@@ -175,3 +193,46 @@ func _nearest_wall() -> Node2D:
 			best_distance = distance
 			best = wall
 	return best
+
+
+func _update_facing(move_vector: Vector2) -> void:
+	if move_vector.length() <= 0.05:
+		return
+	if abs(move_vector.x) > abs(move_vector.y):
+		facing = "side"
+		sprite.flip_h = move_vector.x < 0
+	elif move_vector.y < 0:
+		facing = "up"
+	else:
+		facing = "down"
+
+
+func _update_animation(delta: float, moving: bool) -> void:
+	animation_time += delta
+	var state := "idle"
+	if hit_anim_timer > 0.0:
+		state = "hit"
+	elif attack_anim_timer > 0.0:
+		state = "attack"
+	elif moving:
+		state = "walk"
+	var direction := facing
+	if state == "hit":
+		direction = "down"
+	_set_animation(state + "_" + direction)
+
+
+func _set_animation(next_name: String) -> void:
+	if not sprite.region_enabled:
+		return
+	if animation_name != next_name:
+		animation_name = next_name
+		animation_time = 0.0
+	var anim := ArtRegistry.character_animation(zombie_id, animation_name)
+	if anim.is_empty():
+		return
+	var frames: int = max(1, int(anim.get("frames", 1)))
+	var fps: float = max(1.0, float(anim.get("fps", 1)))
+	var frame: int = int(animation_time * fps) % frames
+	var row: int = int(anim.get("row", 0))
+	sprite.region_rect = Rect2(Vector2(frame * frame_size.x, row * frame_size.y), Vector2(frame_size.x, frame_size.y))

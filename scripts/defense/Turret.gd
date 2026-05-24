@@ -14,8 +14,9 @@ var sprite: Sprite2D
 
 func _ready() -> void:
 	sprite = Sprite2D.new()
-	sprite.texture = TextureLoader.load_texture("res://assets/art/objects/turret.png")
+	sprite.texture = TextureLoader.load_texture(ArtRegistry.object_path("basic_turret", "res://assets/art/objects/turret.png"))
 	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	sprite.scale = Vector2(0.72, 0.72)
 	sprite.scale = Vector2(1.55, 1.55)
 	add_child(sprite)
 	queue_redraw()

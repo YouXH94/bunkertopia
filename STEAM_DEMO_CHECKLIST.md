@@ -58,7 +58,9 @@
 ## Art And Audio
 
 - [ ] No visible pure-color placeholder art remains in gameplay.
-- [ ] Scientist, walker zombie, runner zombie, brute zombie, bunker, plane, ruins, farm, animal pen, wall, gate, turret, generator, lab, containers, resources, UI icons, menu background, and Steam art exist.
+- [ ] Core gameplay art is sourced from the preview-matched dirty low-saturation AI source sheet, not the older technical placeholder generator.
+- [ ] Scientist, walker zombie, runner zombie, brute zombie, crusher, crawler, fire-weak infected, armored infected, bunker, plane, ruins, farm, animal pen, wall, gate, wire, traps, turrets, generator, battery, power pole, lab, containers, resources, UI icons, menu background, and Steam art exist.
+- [ ] Player and zombie animation sheets use stable `64x64` frame tiles and do not show green-screen fringing in gameplay.
 - [ ] Button, pickup, door, gun, turret, zombie, alarm, generator, research, failure, damage, and ambience sounds are present.
 - [ ] Audio buses are active for UI, SFX, and Ambience.
 

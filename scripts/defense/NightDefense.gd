@@ -23,7 +23,7 @@ var trap_cooldowns := {}
 
 func _ready() -> void:
 	rng.randomize()
-	ground_texture = TextureLoader.load_texture("res://assets/art/tiles/night_ground.png")
+	ground_texture = TextureLoader.load_texture(ArtRegistry.tile_path("night_ground", "res://assets/art/tiles/night_ground.png"))
 	GameState.start_night()
 	GameState.night_stats["building_destroyed"] = []
 	GameState.night_stats["farm_loss"] = 0

@@ -15,8 +15,9 @@ func _ready() -> void:
 	collision_layer = 1
 	collision_mask = 0
 	sprite = Sprite2D.new()
-	sprite.texture = TextureLoader.load_texture("res://assets/art/objects/wall_segment.png")
+	sprite.texture = TextureLoader.load_texture(ArtRegistry.object_path("scrap_wall", "res://assets/art/objects/wall_segment.png"))
 	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	sprite.scale = Vector2(0.58, 0.58)
 	sprite.scale = Vector2(1.5, 1.5)
 	add_child(sprite)
 

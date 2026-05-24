@@ -13,9 +13,9 @@ var grid_build_system
 
 
 func _ready() -> void:
-	dirt_texture = TextureLoader.load_texture("res://assets/art/tiles/dirt.png")
-	floor_texture = TextureLoader.load_texture("res://assets/art/tiles/bunker_floor.png")
-	field_texture = TextureLoader.load_texture("res://assets/art/tiles/field.png")
+	dirt_texture = TextureLoader.load_texture(ArtRegistry.tile_path("dirt", "res://assets/art/tiles/dirt.png"))
+	floor_texture = TextureLoader.load_texture(ArtRegistry.tile_path("bunker_floor", "res://assets/art/tiles/bunker_floor.png"))
+	field_texture = TextureLoader.load_texture(ArtRegistry.tile_path("field", "res://assets/art/tiles/field.png"))
 	_spawn_player()
 	_build_base_layout()
 	_setup_grid_building()
@@ -60,24 +60,24 @@ func _spawn_player() -> void:
 func _build_base_layout() -> void:
 	queue_redraw()
 	_add_boundary_collisions()
-	_add_solid_sprite("res://assets/art/objects/crash_plane.png", Vector2(230, 575), Vector2(2.0, 2.0), 1, Vector2(190, 78), Vector2(0, 12))
-	_add_solid_sprite("res://assets/art/objects/bunker.png", Vector2(600, 300), Vector2(2.5, 2.5), 1, Vector2(210, 118), Vector2(0, 18))
-	_add_solid_sprite("res://assets/art/objects/lab.png", Vector2(735, 320), Vector2(2.0, 2.0), 2, Vector2(130, 98), Vector2(0, 14))
-	_add_solid_sprite("res://assets/art/objects/generator.png", Vector2(530, 480), Vector2(1.7, 1.7), 2, Vector2(78, 58), Vector2(0, 12))
-	_add_solid_sprite("res://assets/art/objects/animal_pen.png", Vector2(375, 190), Vector2(1.7, 1.7), 1, Vector2(120, 78), Vector2(0, 14))
-	_add_solid_sprite("res://assets/art/objects/city_gate.png", Vector2(1050, 445), Vector2(1.8, 1.8), 2, Vector2(78, 102), Vector2(0, 8))
+	_add_solid_sprite(ArtRegistry.object_path("crash_plane", "res://assets/art/objects/crash_plane.png"), Vector2(230, 575), Vector2(1.45, 1.45), 1, Vector2(190, 78), Vector2(0, 12))
+	_add_solid_sprite(ArtRegistry.object_path("bunker_core", "res://assets/art/objects/bunker.png"), Vector2(600, 300), Vector2(1.55, 1.55), 1, Vector2(210, 118), Vector2(0, 18))
+	_add_solid_sprite(ArtRegistry.object_path("lab_station", "res://assets/art/objects/lab.png"), Vector2(735, 320), Vector2(1.45, 1.45), 2, Vector2(130, 98), Vector2(0, 14))
+	_add_solid_sprite(ArtRegistry.object_path("generator", "res://assets/art/objects/generator.png"), Vector2(530, 480), Vector2(1.35, 1.35), 2, Vector2(78, 58), Vector2(0, 12))
+	_add_solid_sprite(ArtRegistry.object_path("animal_pen", "res://assets/art/objects/animal_pen.png"), Vector2(375, 190), Vector2(1.25, 1.25), 1, Vector2(120, 78), Vector2(0, 14))
+	_add_solid_sprite(ArtRegistry.object_path("gate", "res://assets/art/objects/city_gate.png"), Vector2(1050, 445), Vector2(1.4, 1.4), 2, Vector2(78, 102), Vector2(0, 8))
 
 	for pos in [Vector2(130, 300), Vector2(250, 300), Vector2(370, 300), Vector2(490, 155), Vector2(610, 155), Vector2(730, 155), Vector2(850, 155), Vector2(970, 300), Vector2(970, 420)]:
-		_add_solid_sprite("res://assets/art/objects/wall_segment.png", pos, Vector2(1.4, 1.4), 3, Vector2(86, 36), Vector2(0, 10))
+		_add_solid_sprite(ArtRegistry.object_path("scrap_wall", "res://assets/art/objects/wall_segment.png"), pos, Vector2(1.25, 1.25), 3, Vector2(86, 36), Vector2(0, 10))
 
 	for pos in [Vector2(875, 235), Vector2(875, 455), Vector2(455, 155)]:
-		_add_solid_sprite("res://assets/art/objects/turret.png", pos, Vector2(1.6, 1.6), 4, Vector2(50, 54), Vector2(0, 8))
+		_add_solid_sprite(ArtRegistry.object_path("basic_turret", "res://assets/art/objects/turret.png"), pos, Vector2(1.2, 1.2), 4, Vector2(50, 54), Vector2(0, 8))
 
 	for pos in [Vector2(160, 175), Vector2(220, 175), Vector2(280, 175), Vector2(160, 235), Vector2(220, 235), Vector2(280, 235)]:
-		_add_solid_sprite("res://assets/art/objects/farm_plot.png", pos, Vector2(1.2, 1.2), 1, Vector2(46, 34), Vector2(0, 8))
+		_add_solid_sprite(ArtRegistry.object_path("farm_plot", "res://assets/art/objects/farm_plot.png"), pos, Vector2(1.1, 1.1), 1, Vector2(46, 34), Vector2(0, 8))
 
 	for pos in [Vector2(980, 155), Vector2(1080, 215), Vector2(1005, 340)]:
-		_add_solid_sprite("res://assets/art/objects/ruined_building.png", pos, Vector2(1.6, 1.6), 1, Vector2(120, 118), Vector2(0, 18))
+		_add_solid_sprite(ArtRegistry.object_path("ruined_building", "res://assets/art/objects/ruined_building.png"), pos, Vector2(1.25, 1.25), 1, Vector2(120, 118), Vector2(0, 18))
 
 
 func _create_interactions() -> void:

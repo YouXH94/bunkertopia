@@ -40,29 +40,38 @@
 - 电力管理：城市电网逐日衰减，发电、耗电、电池、过载和断电影响会显示在 HUD/建造 UI 中
 - 物品与制作：搜刮原料，使用工作台/熔炉/实验台/农田/畜舍加工铁块、螺丝、电路板、电池芯、肥料和饲料
 - 技能成长：工程学、农学、畜牧学、生物学影响制作成功率、耗时和产量，可通过制作和书本提升
-- 统一程序化 2D 像素美术、资源/UI 图标、主菜单背景和 Steam store 源图
+- 参考根目录预览图右侧实机目标的 AI source sheet 美术：角色/僵尸瓦片动画图集、基地/城市/防御/生产建筑透明 PNG、资源/UI 图标、主菜单背景和 Steam store 源图
 - 程序化 WAV 音效，运行时接入 `UI`、`SFX`、`Ambience` 音频总线
 - Windows Demo 导出预设
 
 ## 项目结构
 
 ```text
-assets/art/          游戏内像素美术、角色、物件、地面、UI 图标
+assets/art/          游戏内像素美术、角色瓦片动画图集、物件、地面、UI 图标和 source sheet
 assets/audio/        UI、SFX、夜晚环境音
 assets/steam_store/  Steam capsule/header/library/source artwork
 data/gameplay.json   研究、基地操作、搜刮容器、僵尸和事件数据
 scenes/              Godot 入口、基地、城市、防守和 UI 场景
 scripts/             core、base、city、defense、entities、ui 模块
 scripts/systems/     网格建造、路径、电力、制作、技能、威胁和波次模块
-tools/               可重复生成像素美术、Steam 图和 WAV 音效的脚本
+tools/               可重复生成/抠图/切图/校验像素美术、Steam 图和 WAV 音效的脚本
 ```
 
 ## 重新生成资产
 
 ```bash
 python3 tools/generate_pixel_assets.py
+python3 tools/art_pipeline/extract_ai_target_sheet.py
+python3 tools/art_pipeline/validate_art_assets.py
 godot --headless --path . --import
 ```
+
+## 目标风格美术管线
+
+- 当前可玩资产优先使用 `assets/art/source/generated_raw/ai_target_sprite_sheet.png`，它是参考根目录预览图右侧实机目标生成的脏污低饱和像素 source sheet。
+- `tools/art_pipeline/extract_ai_target_sheet.py` 会从 source sheet 抠绿底、去绿边、切出建筑透明 PNG，并把玩家/僵尸重新装配成固定 `64x64` 瓦片动画图集。
+- `data/art_asset_manifest.json` 是运行时美术清单；`ArtRegistry` 通过它把角色、建筑、地面和 UI 图标映射到 Godot。
+- 可选 ComfyUI 桥接：`python3 tools/art_pipeline/comfy_client.py --server http://192.168.50.143:8000 health`。没有 workflow 时不会阻塞本地管线。
 
 ## 导出 Windows Demo
 
@@ -73,7 +82,7 @@ godot --headless --path . --export-release "Windows Demo" build/windows/Bunkerto
 
 ## 已知限制
 
-- Demo 使用固定小地图和固定防守路线，不是开放世界。
+- Demo 使用固定小地图和开放式基地防守地块，不是开放世界。
 - 存档是单槽试玩存档，不提供多存档管理。
-- 游戏内美术为项目自有程序化像素资源，适合 Demo Candidate，但仍可继续由最终美术替换。
+- 游戏内核心美术已切换为参考目标预览图生成的 AI source sheet 资产；正式上架前仍建议逐帧人工修像素边缘和补齐更多方向帧。
 - Steam store 图已经按尺寸生成，但正式上架前仍建议人工审视可读性、PG-13 适配和截图质量。

@@ -1,0 +1,1157 @@
+{
+  "style": {
+    "name": "preview_matched_dirty_pixel_art",
+    "reference": "165B0C2C-FF86-4F68-B4E7-34CFD2DD5120.PNG right-side gameplay panels",
+    "notes": "Hard post-apocalyptic survival management, grimy low saturation, not cute/cartoon.",
+    "comfyui": "http://192.168.50.143:8000",
+    "chroma_key": "#00ff00",
+    "source_sheet": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png"
+  },
+  "characters": {
+    "scientist": {
+      "sheet": "res://assets/art/characters/sheets/scientist_sheet.png",
+      "frame_size": [
+        64,
+        64
+      ],
+      "animations": {
+        "idle_down": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_side": {
+          "row": 1,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_up": {
+          "row": 2,
+          "frames": 2,
+          "fps": 2
+        },
+        "walk_down": {
+          "row": 3,
+          "frames": 4,
+          "fps": 7
+        },
+        "walk_side": {
+          "row": 4,
+          "frames": 4,
+          "fps": 8
+        },
+        "walk_up": {
+          "row": 5,
+          "frames": 4,
+          "fps": 7
+        },
+        "attack_down": {
+          "row": 6,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_side": {
+          "row": 7,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_up": {
+          "row": 8,
+          "frames": 3,
+          "fps": 10
+        },
+        "hit_down": {
+          "row": 9,
+          "frames": 2,
+          "fps": 8
+        },
+        "death_down": {
+          "row": 10,
+          "frames": 4,
+          "fps": 6
+        }
+      },
+      "offset": [
+        0,
+        -12
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "walker": {
+      "sheet": "res://assets/art/characters/sheets/walker_sheet.png",
+      "frame_size": [
+        64,
+        64
+      ],
+      "animations": {
+        "idle_down": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_side": {
+          "row": 1,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_up": {
+          "row": 2,
+          "frames": 2,
+          "fps": 2
+        },
+        "walk_down": {
+          "row": 3,
+          "frames": 4,
+          "fps": 7
+        },
+        "walk_side": {
+          "row": 4,
+          "frames": 4,
+          "fps": 8
+        },
+        "walk_up": {
+          "row": 5,
+          "frames": 4,
+          "fps": 7
+        },
+        "attack_down": {
+          "row": 6,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_side": {
+          "row": 7,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_up": {
+          "row": 8,
+          "frames": 3,
+          "fps": 10
+        },
+        "hit_down": {
+          "row": 9,
+          "frames": 2,
+          "fps": 8
+        },
+        "death_down": {
+          "row": 10,
+          "frames": 4,
+          "fps": 6
+        }
+      },
+      "offset": [
+        0,
+        -12
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "runner": {
+      "sheet": "res://assets/art/characters/sheets/runner_sheet.png",
+      "frame_size": [
+        64,
+        64
+      ],
+      "animations": {
+        "idle_down": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_side": {
+          "row": 1,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_up": {
+          "row": 2,
+          "frames": 2,
+          "fps": 2
+        },
+        "walk_down": {
+          "row": 3,
+          "frames": 4,
+          "fps": 7
+        },
+        "walk_side": {
+          "row": 4,
+          "frames": 4,
+          "fps": 8
+        },
+        "walk_up": {
+          "row": 5,
+          "frames": 4,
+          "fps": 7
+        },
+        "attack_down": {
+          "row": 6,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_side": {
+          "row": 7,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_up": {
+          "row": 8,
+          "frames": 3,
+          "fps": 10
+        },
+        "hit_down": {
+          "row": 9,
+          "frames": 2,
+          "fps": 8
+        },
+        "death_down": {
+          "row": 10,
+          "frames": 4,
+          "fps": 6
+        }
+      },
+      "offset": [
+        0,
+        -12
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "brute": {
+      "sheet": "res://assets/art/characters/sheets/brute_sheet.png",
+      "frame_size": [
+        64,
+        64
+      ],
+      "animations": {
+        "idle_down": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_side": {
+          "row": 1,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_up": {
+          "row": 2,
+          "frames": 2,
+          "fps": 2
+        },
+        "walk_down": {
+          "row": 3,
+          "frames": 4,
+          "fps": 7
+        },
+        "walk_side": {
+          "row": 4,
+          "frames": 4,
+          "fps": 8
+        },
+        "walk_up": {
+          "row": 5,
+          "frames": 4,
+          "fps": 7
+        },
+        "attack_down": {
+          "row": 6,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_side": {
+          "row": 7,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_up": {
+          "row": 8,
+          "frames": 3,
+          "fps": 10
+        },
+        "hit_down": {
+          "row": 9,
+          "frames": 2,
+          "fps": 8
+        },
+        "death_down": {
+          "row": 10,
+          "frames": 4,
+          "fps": 6
+        }
+      },
+      "offset": [
+        0,
+        -12
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "crusher": {
+      "sheet": "res://assets/art/characters/sheets/crusher_sheet.png",
+      "frame_size": [
+        64,
+        64
+      ],
+      "animations": {
+        "idle_down": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_side": {
+          "row": 1,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_up": {
+          "row": 2,
+          "frames": 2,
+          "fps": 2
+        },
+        "walk_down": {
+          "row": 3,
+          "frames": 4,
+          "fps": 7
+        },
+        "walk_side": {
+          "row": 4,
+          "frames": 4,
+          "fps": 8
+        },
+        "walk_up": {
+          "row": 5,
+          "frames": 4,
+          "fps": 7
+        },
+        "attack_down": {
+          "row": 6,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_side": {
+          "row": 7,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_up": {
+          "row": 8,
+          "frames": 3,
+          "fps": 10
+        },
+        "hit_down": {
+          "row": 9,
+          "frames": 2,
+          "fps": 8
+        },
+        "death_down": {
+          "row": 10,
+          "frames": 4,
+          "fps": 6
+        }
+      },
+      "offset": [
+        0,
+        -12
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "crawler": {
+      "sheet": "res://assets/art/characters/sheets/crawler_sheet.png",
+      "frame_size": [
+        64,
+        64
+      ],
+      "animations": {
+        "idle_down": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_side": {
+          "row": 1,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_up": {
+          "row": 2,
+          "frames": 2,
+          "fps": 2
+        },
+        "walk_down": {
+          "row": 3,
+          "frames": 4,
+          "fps": 7
+        },
+        "walk_side": {
+          "row": 4,
+          "frames": 4,
+          "fps": 8
+        },
+        "walk_up": {
+          "row": 5,
+          "frames": 4,
+          "fps": 7
+        },
+        "attack_down": {
+          "row": 6,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_side": {
+          "row": 7,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_up": {
+          "row": 8,
+          "frames": 3,
+          "fps": 10
+        },
+        "hit_down": {
+          "row": 9,
+          "frames": 2,
+          "fps": 8
+        },
+        "death_down": {
+          "row": 10,
+          "frames": 4,
+          "fps": 6
+        }
+      },
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "fire_weak_infected": {
+      "sheet": "res://assets/art/characters/sheets/fire_weak_infected_sheet.png",
+      "frame_size": [
+        64,
+        64
+      ],
+      "animations": {
+        "idle_down": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_side": {
+          "row": 1,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_up": {
+          "row": 2,
+          "frames": 2,
+          "fps": 2
+        },
+        "walk_down": {
+          "row": 3,
+          "frames": 4,
+          "fps": 7
+        },
+        "walk_side": {
+          "row": 4,
+          "frames": 4,
+          "fps": 8
+        },
+        "walk_up": {
+          "row": 5,
+          "frames": 4,
+          "fps": 7
+        },
+        "attack_down": {
+          "row": 6,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_side": {
+          "row": 7,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_up": {
+          "row": 8,
+          "frames": 3,
+          "fps": 10
+        },
+        "hit_down": {
+          "row": 9,
+          "frames": 2,
+          "fps": 8
+        },
+        "death_down": {
+          "row": 10,
+          "frames": 4,
+          "fps": 6
+        }
+      },
+      "offset": [
+        0,
+        -12
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "armored": {
+      "sheet": "res://assets/art/characters/sheets/armored_sheet.png",
+      "frame_size": [
+        64,
+        64
+      ],
+      "animations": {
+        "idle_down": {
+          "row": 0,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_side": {
+          "row": 1,
+          "frames": 2,
+          "fps": 2
+        },
+        "idle_up": {
+          "row": 2,
+          "frames": 2,
+          "fps": 2
+        },
+        "walk_down": {
+          "row": 3,
+          "frames": 4,
+          "fps": 7
+        },
+        "walk_side": {
+          "row": 4,
+          "frames": 4,
+          "fps": 8
+        },
+        "walk_up": {
+          "row": 5,
+          "frames": 4,
+          "fps": 7
+        },
+        "attack_down": {
+          "row": 6,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_side": {
+          "row": 7,
+          "frames": 3,
+          "fps": 10
+        },
+        "attack_up": {
+          "row": 8,
+          "frames": 3,
+          "fps": 10
+        },
+        "hit_down": {
+          "row": 9,
+          "frames": 2,
+          "fps": 8
+        },
+        "death_down": {
+          "row": 10,
+          "frames": 4,
+          "fps": 6
+        }
+      },
+      "offset": [
+        0,
+        -12
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    }
+  },
+  "objects": {
+    "bunker_core": {
+      "path": "res://assets/art/objects/generated/bunker_core.png",
+      "size": [
+        272,
+        183
+      ],
+      "scale": 0.58,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "lab_station": {
+      "path": "res://assets/art/objects/generated/lab_station.png",
+      "size": [
+        198,
+        141
+      ],
+      "scale": 0.64,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "workbench": {
+      "path": "res://assets/art/objects/generated/workbench.png",
+      "size": [
+        210,
+        151
+      ],
+      "scale": 0.64,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "furnace": {
+      "path": "res://assets/art/objects/generated/furnace.png",
+      "size": [
+        230,
+        166
+      ],
+      "scale": 0.58,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "farm_plot": {
+      "path": "res://assets/art/objects/generated/farm_plot.png",
+      "size": [
+        226,
+        167
+      ],
+      "scale": 0.58,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "animal_pen": {
+      "path": "res://assets/art/objects/generated/animal_pen.png",
+      "size": [
+        253,
+        170
+      ],
+      "scale": 0.58,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "barricade": {
+      "path": "res://assets/art/objects/generated/barricade.png",
+      "size": [
+        190,
+        119
+      ],
+      "scale": 0.58,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "scrap_wall": {
+      "path": "res://assets/art/objects/generated/scrap_wall.png",
+      "size": [
+        179,
+        116
+      ],
+      "scale": 0.58,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "gate": {
+      "path": "res://assets/art/objects/generated/gate.png",
+      "size": [
+        168,
+        118
+      ],
+      "scale": 0.58,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "wire_fence": {
+      "path": "res://assets/art/objects/generated/wire_fence.png",
+      "size": [
+        188,
+        116
+      ],
+      "scale": 0.58,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "spike_trap": {
+      "path": "res://assets/art/objects/generated/spike_trap.png",
+      "size": [
+        134,
+        91
+      ],
+      "scale": 0.72,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "flame_trap": {
+      "path": "res://assets/art/objects/generated/flame_trap.png",
+      "size": [
+        137,
+        119
+      ],
+      "scale": 0.72,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "basic_turret": {
+      "path": "res://assets/art/objects/generated/basic_turret.png",
+      "size": [
+        138,
+        104
+      ],
+      "scale": 0.72,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "shotgun_turret": {
+      "path": "res://assets/art/objects/generated/shotgun_turret.png",
+      "size": [
+        120,
+        114
+      ],
+      "scale": 0.72,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "spotlight": {
+      "path": "res://assets/art/objects/generated/spotlight.png",
+      "size": [
+        78,
+        115
+      ],
+      "scale": 0.72,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "generator": {
+      "path": "res://assets/art/objects/generated/generator.png",
+      "size": [
+        197,
+        131
+      ],
+      "scale": 0.64,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "battery": {
+      "path": "res://assets/art/objects/generated/battery.png",
+      "size": [
+        146,
+        116
+      ],
+      "scale": 0.72,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "power_pole": {
+      "path": "res://assets/art/objects/generated/power_pole.png",
+      "size": [
+        137,
+        170
+      ],
+      "scale": 0.55,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "container": {
+      "path": "res://assets/art/objects/generated/container.png",
+      "size": [
+        144,
+        128
+      ],
+      "scale": 0.72,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "crash_plane": {
+      "path": "res://assets/art/objects/generated/crash_plane.png",
+      "size": [
+        348,
+        251
+      ],
+      "scale": 0.72,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "ruined_building": {
+      "path": "res://assets/art/objects/generated/ruined_building.png",
+      "size": [
+        367,
+        231
+      ],
+      "scale": 0.72,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "rubble": {
+      "path": "res://assets/art/objects/generated/rubble.png",
+      "size": [
+        324,
+        158
+      ],
+      "scale": 0.72,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    },
+    "wrecked_car": {
+      "path": "res://assets/art/objects/generated/wrecked_car.png",
+      "size": [
+        288,
+        156
+      ],
+      "scale": 0.72,
+      "offset": [
+        0,
+        -8
+      ],
+      "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
+      "style": "ai_target_preview"
+    }
+  },
+  "tiles": {
+    "dirt": {
+      "path": "res://assets/art/tiles/generated/dirt.png",
+      "size": [
+        64,
+        64
+      ]
+    },
+    "bunker_floor": {
+      "path": "res://assets/art/tiles/generated/bunker_floor.png",
+      "size": [
+        64,
+        64
+      ]
+    },
+    "field": {
+      "path": "res://assets/art/tiles/generated/field.png",
+      "size": [
+        64,
+        64
+      ]
+    },
+    "cracked_road": {
+      "path": "res://assets/art/tiles/generated/cracked_road.png",
+      "size": [
+        64,
+        64
+      ]
+    },
+    "dark_ground": {
+      "path": "res://assets/art/tiles/generated/dark_ground.png",
+      "size": [
+        64,
+        64
+      ]
+    },
+    "night_ground": {
+      "path": "res://assets/art/tiles/generated/night_ground.png",
+      "size": [
+        64,
+        64
+      ]
+    }
+  },
+  "ui_icons": {
+    "food": {
+      "path": "res://assets/art/ui/generated/icon_food.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "water": {
+      "path": "res://assets/art/ui/generated/icon_water.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "power": {
+      "path": "res://assets/art/ui/generated/icon_power.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "ammo": {
+      "path": "res://assets/art/ui/generated/icon_ammo.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "fuel": {
+      "path": "res://assets/art/ui/generated/icon_fuel.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "samples": {
+      "path": "res://assets/art/ui/generated/icon_samples.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "parts": {
+      "path": "res://assets/art/ui/generated/icon_parts.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "base": {
+      "path": "res://assets/art/ui/generated/icon_base.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "scrap": {
+      "path": "res://assets/art/ui/generated/icon_scrap.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wood": {
+      "path": "res://assets/art/ui/generated/icon_wood.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "cloth": {
+      "path": "res://assets/art/ui/generated/icon_cloth.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wire": {
+      "path": "res://assets/art/ui/generated/icon_wire.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "electronics": {
+      "path": "res://assets/art/ui/generated/icon_electronics.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "chemicals": {
+      "path": "res://assets/art/ui/generated/icon_chemicals.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "seeds": {
+      "path": "res://assets/art/ui/generated/icon_seeds.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "raw_food": {
+      "path": "res://assets/art/ui/generated/icon_raw_food.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "medicine": {
+      "path": "res://assets/art/ui/generated/icon_medicine.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "books": {
+      "path": "res://assets/art/ui/generated/icon_books.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "iron_ingot": {
+      "path": "res://assets/art/ui/generated/icon_iron_ingot.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "screws": {
+      "path": "res://assets/art/ui/generated/icon_screws.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "circuit_board": {
+      "path": "res://assets/art/ui/generated/icon_circuit_board.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "battery_cell": {
+      "path": "res://assets/art/ui/generated/icon_battery_cell.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "fertilizer": {
+      "path": "res://assets/art/ui/generated/icon_fertilizer.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "animal_feed": {
+      "path": "res://assets/art/ui/generated/icon_animal_feed.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "build": {
+      "path": "res://assets/art/ui/generated/icon_build.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "threat": {
+      "path": "res://assets/art/ui/generated/icon_threat.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "skills": {
+      "path": "res://assets/art/ui/generated/icon_skills.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "crafting": {
+      "path": "res://assets/art/ui/generated/icon_crafting.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "research": {
+      "path": "res://assets/art/ui/generated/icon_research.png",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "app": {
+      "path": "res://assets/art/ui/generated/icon.png",
+      "size": [
+        64,
+        64
+      ]
+    }
+  },
+  "raw_sources": [
+    "res://assets/art/source/generated_raw/characters_walk_contact_sheet.png",
+    "res://assets/art/source/generated_raw/core_objects_contact_sheet.png",
+    "res://assets/art/source/generated_raw/ui_icons_contact_sheet.png"
+  ]
+}

@@ -20,3 +20,5 @@
 - Added dynamic multi-direction wave generation based on footprint, noise, smell, light, day, and tech pressure.
 - Added expanded zombie data with building damage, target priorities, armor, fire weakness, pierce weakness, rewards, and spawn weights.
 - Added item inventory, crafting recipes, facility requirements, city power decay, power reports, and skill growth.
+- Added preview-matched AI source-sheet art pass for the core demo: scientist and zombie tile animation sheets, generated object cutouts, source/cutout folders, manifest-driven `ArtRegistry`, and runtime texture swaps for base, city, night defense, HUD, turrets, walls, and buildable defense objects.
+- Added reusable art pipeline tools for ComfyUI health/submission, chroma-key cutout, atlas packing, AI-sheet extraction, and manifest validation.
