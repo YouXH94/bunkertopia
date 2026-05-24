@@ -1490,34 +1490,42 @@
     },
     "mountain_atlas": {
       "path": "res://assets/art/tiles/generated/mountain_atlas.png",
-      "source": "res://assets/art/source/generated_raw/imagegen_mountain_connectable_atlas_source.png",
+      "source": "res://assets/art/source/generated_raw/imagegen_mountain_height_atlas_source.png",
       "size": [
-        256,
+        384,
         256
       ],
       "tile_size": [
         64,
         64
       ],
-      "columns": 4,
+      "columns": 6,
       "rows": 4,
       "tiles": [
-        "mountain_isolated",
-        "mountain_end_north",
-        "mountain_end_east",
-        "mountain_end_south",
-        "mountain_end_west",
-        "mountain_straight_ns",
-        "mountain_straight_ew",
-        "mountain_corner_ne",
-        "mountain_corner_es",
-        "mountain_corner_sw",
-        "mountain_corner_wn",
-        "mountain_t_nes",
-        "mountain_t_esw",
-        "mountain_t_swn",
-        "mountain_t_wne",
-        "mountain_cross"
+        "plateau_flat_a",
+        "plateau_flat_b",
+        "plateau_cracked",
+        "plateau_stony",
+        "plateau_scree",
+        "plateau_broken",
+        "front_cliff_left",
+        "front_cliff_mid",
+        "front_cliff_right",
+        "front_cliff_outer_left",
+        "front_cliff_outer_right",
+        "front_cliff_broken",
+        "side_cliff_west",
+        "side_cliff_east",
+        "corner_northwest",
+        "corner_northeast",
+        "corner_southwest",
+        "corner_southeast",
+        "diagonal_slope_left",
+        "diagonal_slope_right",
+        "rubble_ramp",
+        "cave_mouth",
+        "boulder_scree_field",
+        "isolated_mountain_mound"
       ],
       "style": "imagegen_target_reference"
     },
@@ -1706,6 +1714,6 @@
   },
   "previews": {
     "nature_environment": "res://assets/art/source/generated_raw/nature_environment_preview.png",
-    "mountain_connectivity": "res://assets/art/source/generated_raw/mountain_connectivity_preview.png"
+    "mountain_height": "res://assets/art/source/generated_raw/mountain_height_preview.png"
   }
 }
