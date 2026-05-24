@@ -41,6 +41,7 @@
 - 物品与制作：搜刮原料，使用工作台/熔炉/实验台/农田/畜舍加工铁块、螺丝、电路板、电池芯、肥料和饲料
 - 技能成长：工程学、农学、畜牧学、生物学影响制作成功率、耗时和产量，可通过制作和书本提升
 - 参考根目录预览图右侧实机目标的 AI source sheet 美术：角色/僵尸瓦片动画图集、基地/城市/防御/生产建筑透明 PNG、资源/UI 图标、主菜单背景和 Steam store 源图
+- 基地、城市和夜晚防守地面已迁移到 Godot `TileMapLayer`，可在编辑器里直接手动画地块、道路和地表层
 - 程序化 WAV 音效，运行时接入 `UI`、`SFX`、`Ambience` 音频总线
 - Windows Demo 导出预设
 
@@ -56,6 +57,15 @@ scripts/             core、base、city、defense、entities、ui 模块
 scripts/systems/     网格建造、路径、电力、制作、技能、威胁和波次模块
 tools/               可重复生成/抠图/切图/校验像素美术、Steam 图和 WAV 音效的脚本
 ```
+
+## 地图编辑
+
+- 共享 TileSet：`res://assets/art/tiles/bunkertopia_tileset.tres`
+- 基地地图：打开 `res://scenes/base/BaseHub.tscn`，编辑 `GroundLayer`、`RoadLayer`、`FloorLayer`、`FieldLayer`
+- 城市地图：打开 `res://scenes/city/CityExplore.tscn`，编辑 `GroundLayer`、`RoadLayer`
+- 夜晚防守地图：打开 `res://scenes/defense/NightDefense.tscn`，编辑 `GroundLayer`
+- 当前 TileSet 已接入 64x64 地表瓦片和一个物理层；碰撞形状、Terrain Set、额外 Layer 可在 Godot 编辑器中继续手动配置。
+- 建筑、可交互点、自由建造、防守寻路仍由脚本和数据系统驱动；地面 TileMap 只负责可绘制地图底层。
 
 ## 重新生成资产
 

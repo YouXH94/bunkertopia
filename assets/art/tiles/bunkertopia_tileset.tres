@@ -1,0 +1,48 @@
+[gd_resource type="TileSet" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/dirt.png" id="1_0m7ki"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/bunker_floor.png" id="2_ta3o7"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/field.png" id="3_kr12y"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/cracked_road.png" id="4_2r8uj"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/dark_ground.png" id="5_jk245"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/night_ground.png" id="6_tmgly"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gwfkw"]
+texture = ExtResource("1_0m7ki")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trmbt"]
+texture = ExtResource("2_ta3o7")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g388t"]
+texture = ExtResource("3_kr12y")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oe1fe"]
+texture = ExtResource("4_2r8uj")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxe4v"]
+texture = ExtResource("5_jk245")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ktwv"]
+texture = ExtResource("6_tmgly")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_gwfkw")
+sources/1 = SubResource("TileSetAtlasSource_trmbt")
+sources/2 = SubResource("TileSetAtlasSource_g388t")
+sources/3 = SubResource("TileSetAtlasSource_oe1fe")
+sources/4 = SubResource("TileSetAtlasSource_kxe4v")
+sources/5 = SubResource("TileSetAtlasSource_0ktwv")

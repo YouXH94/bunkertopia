@@ -2,13 +2,11 @@ extends Node2D
 
 const PlayerController := preload("res://scripts/entities/PlayerController.gd")
 const DefenseBuilding := preload("res://scripts/build/DefenseBuilding.gd")
-const TextureLoader := preload("res://scripts/core/TextureLoader.gd")
 const PathGridSystem := preload("res://scripts/systems/PathGridSystem.gd")
 const WaveDirector := preload("res://scripts/systems/WaveDirector.gd")
 const ThreatDirector := preload("res://scripts/systems/ThreatDirector.gd")
 const ZombieEnemy := preload("res://scripts/defense/ZombieEnemy.gd")
 
-var ground_texture: Texture2D
 var player: CharacterBody2D
 var building_nodes := {}
 var spawn_timer: Timer
@@ -23,7 +21,6 @@ var trap_cooldowns := {}
 
 func _ready() -> void:
 	rng.randomize()
-	ground_texture = TextureLoader.load_texture(ArtRegistry.tile_path("night_ground", "res://assets/art/tiles/night_ground.png"))
 	GameState.start_night()
 	GameState.night_stats["building_destroyed"] = []
 	GameState.night_stats["farm_loss"] = 0
@@ -39,11 +36,6 @@ func _ready() -> void:
 
 
 func _draw() -> void:
-	draw_rect(Rect2(Vector2.ZERO, Vector2(1280, 720)), Color(0.024, 0.032, 0.044))
-	for x in range(0, 1280, 64):
-		for y in range(0, 720, 64):
-			if ground_texture != null:
-				draw_texture(ground_texture, Vector2(x, y))
 	for x in range(PathGridSystem.COLS):
 		for y in range(PathGridSystem.ROWS):
 			var pos := PathGridSystem.ORIGIN + Vector2(x * PathGridSystem.CELL_SIZE, y * PathGridSystem.CELL_SIZE)

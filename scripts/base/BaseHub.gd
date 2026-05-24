@@ -6,43 +6,15 @@ const TextureLoader := preload("res://scripts/core/TextureLoader.gd")
 const GridBuildSystem := preload("res://scripts/systems/GridBuildSystem.gd")
 
 var player: CharacterBody2D
-var dirt_texture: Texture2D
-var floor_texture: Texture2D
-var field_texture: Texture2D
 var grid_build_system
 
 
 func _ready() -> void:
-	dirt_texture = TextureLoader.load_texture(ArtRegistry.tile_path("dirt", "res://assets/art/tiles/dirt.png"))
-	floor_texture = TextureLoader.load_texture(ArtRegistry.tile_path("bunker_floor", "res://assets/art/tiles/bunker_floor.png"))
-	field_texture = TextureLoader.load_texture(ArtRegistry.tile_path("field", "res://assets/art/tiles/field.png"))
 	_spawn_player()
 	_build_base_layout()
 	_setup_grid_building()
 	_create_interactions()
 	EventBus.announce_notice("白天行动：搜刮、研究、维护防线。夜晚前请确认炮塔、电力和食物。")
-
-
-func _draw() -> void:
-	draw_rect(Rect2(Vector2.ZERO, Vector2(1280, 720)), Color(0.11, 0.12, 0.09))
-	for x in range(0, 1280, 64):
-		for y in range(0, 720, 64):
-			if dirt_texture != null:
-				draw_texture(dirt_texture, Vector2(x, y))
-
-	draw_rect(Rect2(420, 190, 450, 310), Color(0.18, 0.15, 0.11))
-	for x in range(430, 850, 64):
-		for y in range(200, 490, 64):
-			if floor_texture != null:
-				draw_texture(floor_texture, Vector2(x, y))
-
-	for x in range(150, 340, 48):
-		for y in range(160, 285, 48):
-			if field_texture != null:
-				draw_texture(field_texture, Vector2(x, y))
-
-	draw_rect(Rect2(70, 540, 380, 90), Color(0.16, 0.16, 0.15))
-	draw_rect(Rect2(900, 100, 260, 420), Color(0.10, 0.10, 0.10))
 
 
 func _spawn_player() -> void:
@@ -58,11 +30,10 @@ func _spawn_player() -> void:
 
 
 func _build_base_layout() -> void:
-	queue_redraw()
 	_add_boundary_collisions()
-	_add_solid_sprite(ArtRegistry.object_path("crash_plane", "res://assets/art/objects/crash_plane.png"), Vector2(230, 575), Vector2(1.45, 1.45), 1, Vector2(190, 78), Vector2(0, 12))
-	_add_solid_sprite(ArtRegistry.object_path("bunker_core", "res://assets/art/objects/bunker.png"), Vector2(600, 300), Vector2(1.55, 1.55), 1, Vector2(210, 118), Vector2(0, 18))
-	_add_solid_sprite(ArtRegistry.object_path("lab_station", "res://assets/art/objects/lab.png"), Vector2(735, 320), Vector2(1.45, 1.45), 2, Vector2(130, 98), Vector2(0, 14))
+	_add_solid_sprite(ArtRegistry.object_path("crash_plane", "res://assets/art/objects/crash_plane.png"), Vector2(230, 575), Vector2(1.45, 1.45), 3, Vector2(190, 78), Vector2(0, 12))
+	_add_solid_sprite(ArtRegistry.object_path("bunker_core", "res://assets/art/objects/bunker.png"), Vector2(600, 300), Vector2(1.55, 1.55), 3, Vector2(210, 118), Vector2(0, 18))
+	_add_solid_sprite(ArtRegistry.object_path("lab_station", "res://assets/art/objects/lab.png"), Vector2(735, 320), Vector2(1.45, 1.45), 4, Vector2(130, 98), Vector2(0, 14))
 	_add_solid_sprite(ArtRegistry.object_path("generator", "res://assets/art/objects/generator.png"), Vector2(530, 480), Vector2(1.35, 1.35), 2, Vector2(78, 58), Vector2(0, 12))
 	_add_solid_sprite(ArtRegistry.object_path("animal_pen", "res://assets/art/objects/animal_pen.png"), Vector2(375, 190), Vector2(1.25, 1.25), 1, Vector2(120, 78), Vector2(0, 14))
 	_add_solid_sprite(ArtRegistry.object_path("gate", "res://assets/art/objects/city_gate.png"), Vector2(1050, 445), Vector2(1.4, 1.4), 2, Vector2(78, 102), Vector2(0, 8))
