@@ -1453,5 +1453,106 @@
       "fps": 6,
       "style": "procedural_lab_interior"
     }
+  },
+  "atlases": {
+    "stone_road_atlas": {
+      "columns": 4,
+      "rows": 4,
+      "tiles": [
+        "road_end_up",
+        "road_end_down",
+        "road_end_left",
+        "road_end_right",
+        "road_corner_up_right",
+        "road_corner_right_down",
+        "road_corner_down_left",
+        "road_corner_left_up",
+        "road_straight_horizontal",
+        "road_straight_vertical",
+        "road_t_up",
+        "road_t_right",
+        "road_t_down",
+        "road_t_left",
+        "road_cross",
+        "road_broken_plaza"
+      ],
+      "path": "res://assets/art/tiles/generated/stone_road_atlas.png",
+      "size": [
+        256,
+        256
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "style": "procedural_wasteland_nature"
+    },
+    "mountain_atlas": {
+      "columns": 4,
+      "rows": 3,
+      "tiles": [
+        "mountain_center",
+        "mountain_edge_top",
+        "mountain_edge_right",
+        "mountain_edge_bottom",
+        "mountain_edge_left",
+        "mountain_corner_top_right",
+        "mountain_corner_bottom_right",
+        "mountain_corner_bottom_left",
+        "mountain_corner_top_left",
+        "gravel_slope",
+        "cave_mouth",
+        "boulder_field"
+      ],
+      "path": "res://assets/art/tiles/generated/mountain_atlas.png",
+      "size": [
+        256,
+        192
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "style": "procedural_wasteland_nature"
+    },
+    "nature_atlas": {
+      "columns": 5,
+      "rows": 4,
+      "tiles": [
+        "dead_tree",
+        "pine_tree",
+        "bent_tree",
+        "tree_stump",
+        "fallen_log",
+        "large_bush",
+        "small_bush",
+        "dry_grass",
+        "wild_grass",
+        "dead_flowers",
+        "rock_cluster",
+        "mossy_rock",
+        "mud_pit",
+        "cracked_soil",
+        "root_cluster",
+        "grass_variant_a",
+        "grass_variant_b",
+        "flower_variant",
+        "sapling",
+        "scrub_patch"
+      ],
+      "path": "res://assets/art/tiles/generated/nature_atlas.png",
+      "size": [
+        320,
+        256
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "style": "procedural_wasteland_nature"
+    }
+  },
+  "previews": {
+    "nature_environment": "res://assets/art/source/generated_raw/nature_environment_preview.png"
   }
 }

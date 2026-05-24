@@ -1,414 +1,483 @@
 [gd_resource type="TileSet" format=3]
 
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/dirt.png" id="1_tesxr"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/bunker_floor.png" id="2_0x3lv"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/bunker_core.png" id="3_dnsyr"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/container.png" id="4_67un8"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/crash_plane.png" id="5_51i1s"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/farm_plot.png" id="6_4o2mb"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/flame_trap.png" id="7_fuwdx"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/furnace.png" id="8_sgymg"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/gate.png" id="9_4bpgx"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/generator.png" id="10_306s3"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/lab_station.png" id="11_hmqmx"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/power_pole.png" id="12_ar5rc"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/field.png" id="13_8e4wt"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/rubble.png" id="14_gv364"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/ruined_building.png" id="15_khw20"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/scrap_wall.png" id="16_pwhn5"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/shotgun_turret.png" id="17_fxaak"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/spike_trap.png" id="18_7wejx"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/spotlight.png" id="19_qk4p0"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/wire_fence.png" id="20_op2gp"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/workbench.png" id="21_c4t4l"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/wrecked_car.png" id="22_aysja"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/lab_floor.png" id="23_e3p1j"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/cracked_road.png" id="24_x7mfu"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/lab_floor_cable.png" id="25_lftk2"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/lab_floor_grate.png" id="26_27i3v"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/bunker_bed.png" id="27_54760"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/bunker_entrance.png" id="28_7il00"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/lab_desk.png" id="29_22hd3"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/lab_wall_panel.png" id="30_1eq6t"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/lab_wall_pipes.png" id="31_y6lep"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/lab_wall_warning.png" id="32_bqqb8"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/metal_chair.png" id="33_vku5l"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/metal_shelf.png" id="34_sa2kp"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/dark_ground.png" id="35_12utr"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/rusty_locker.png" id="36_lrv8v"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/rusty_table.png" id="37_ipj27"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer.png" id="38_nh77t"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_00.png" id="39_dswg2"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_01.png" id="40_dr2at"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_02.png" id="41_en31u"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_03.png" id="42_s1qg6"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_04.png" id="43_04mwq"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_05.png" id="44_pdto1"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_06.png" id="45_n735v"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/night_ground.png" id="46_t16ey"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_07.png" id="47_sjrh0"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/animal_pen.png" id="48_uya5i"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/barricade.png" id="49_qpc3u"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/basic_turret.png" id="50_kqjn7"]
-[ext_resource type="Texture2D" path="res://assets/art/objects/generated/battery.png" id="51_e8557"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7eqmn"]
-resource_name = "dirt"
-texture = ExtResource("1_tesxr")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3s5ka"]
-resource_name = "bunker_floor"
-texture = ExtResource("2_0x3lv")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sxtor"]
-resource_name = "bunker_core"
-texture = ExtResource("3_dnsyr")
-texture_region_size = Vector2i(272, 183)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_svq3x"]
-resource_name = "container"
-texture = ExtResource("4_67un8")
-texture_region_size = Vector2i(144, 128)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_slomk"]
-resource_name = "crash_plane"
-texture = ExtResource("5_51i1s")
-texture_region_size = Vector2i(348, 251)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfbgc"]
-resource_name = "farm_plot"
-texture = ExtResource("6_4o2mb")
-texture_region_size = Vector2i(226, 167)
-0:0/0 = 0
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/dirt.png" id="1_67un8"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/bunker_floor.png" id="2_51i1s"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/bunker_core.png" id="3_4o2mb"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/container.png" id="4_fuwdx"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/crash_plane.png" id="5_sgymg"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/farm_plot.png" id="6_4bpgx"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/flame_trap.png" id="7_306s3"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/furnace.png" id="8_hmqmx"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/gate.png" id="9_ar5rc"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/generator.png" id="10_8e4wt"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/lab_station.png" id="11_gv364"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/power_pole.png" id="12_khw20"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/field.png" id="13_pwhn5"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/rubble.png" id="14_fxaak"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/ruined_building.png" id="15_7wejx"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/scrap_wall.png" id="16_qk4p0"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/shotgun_turret.png" id="17_op2gp"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/spike_trap.png" id="18_c4t4l"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/spotlight.png" id="19_aysja"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/wire_fence.png" id="20_e3p1j"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/workbench.png" id="21_x7mfu"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/wrecked_car.png" id="22_lftk2"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/lab_floor.png" id="23_27i3v"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/cracked_road.png" id="24_54760"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/lab_floor_cable.png" id="25_7il00"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/lab_floor_grate.png" id="26_22hd3"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/bunker_bed.png" id="27_1eq6t"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/bunker_entrance.png" id="28_y6lep"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/lab_desk.png" id="29_bqqb8"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/lab_wall_panel.png" id="30_vku5l"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/lab_wall_pipes.png" id="31_sa2kp"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/lab_wall_warning.png" id="32_12utr"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/metal_chair.png" id="33_lrv8v"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/metal_shelf.png" id="34_ipj27"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/dark_ground.png" id="35_nh77t"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/rusty_locker.png" id="36_dswg2"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/rusty_table.png" id="37_dr2at"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer.png" id="38_en31u"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_00.png" id="39_s1qg6"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_01.png" id="40_04mwq"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_02.png" id="41_pdto1"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_03.png" id="42_n735v"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_04.png" id="43_t16ey"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_05.png" id="44_sjrh0"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_06.png" id="45_uya5i"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/night_ground.png" id="46_qpc3u"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/supercomputer_screen_frame_07.png" id="47_kqjn7"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/stone_road_atlas.png" id="48_e8557"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/mountain_atlas.png" id="49_7eqmn"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/nature_atlas.png" id="50_3s5ka"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/animal_pen.png" id="51_sxtor"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/barricade.png" id="52_svq3x"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/basic_turret.png" id="53_slomk"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/battery.png" id="54_rfbgc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s1b4x"]
-resource_name = "flame_trap"
-texture = ExtResource("7_fuwdx")
-texture_region_size = Vector2i(137, 119)
+resource_name = "dirt"
+texture = ExtResource("1_67un8")
+texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pqli7"]
-resource_name = "furnace"
-texture = ExtResource("8_sgymg")
-texture_region_size = Vector2i(230, 166)
+resource_name = "bunker_floor"
+texture = ExtResource("2_51i1s")
+texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fuxcs"]
-resource_name = "gate"
-texture = ExtResource("9_4bpgx")
-texture_region_size = Vector2i(168, 118)
+resource_name = "bunker_core"
+texture = ExtResource("3_4o2mb")
+texture_region_size = Vector2i(272, 183)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_llogh"]
-resource_name = "generator"
-texture = ExtResource("10_306s3")
-texture_region_size = Vector2i(197, 131)
+resource_name = "container"
+texture = ExtResource("4_fuwdx")
+texture_region_size = Vector2i(144, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5p44f"]
-resource_name = "lab_station"
-texture = ExtResource("11_hmqmx")
-texture_region_size = Vector2i(198, 141)
+resource_name = "crash_plane"
+texture = ExtResource("5_sgymg")
+texture_region_size = Vector2i(348, 251)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uuatp"]
-resource_name = "power_pole"
-texture = ExtResource("12_ar5rc")
-texture_region_size = Vector2i(137, 170)
+resource_name = "farm_plot"
+texture = ExtResource("6_4bpgx")
+texture_region_size = Vector2i(226, 167)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5q05"]
-resource_name = "field"
-texture = ExtResource("13_8e4wt")
-texture_region_size = Vector2i(64, 64)
+resource_name = "flame_trap"
+texture = ExtResource("7_306s3")
+texture_region_size = Vector2i(137, 119)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78uq7"]
-resource_name = "rubble"
-texture = ExtResource("14_gv364")
-texture_region_size = Vector2i(324, 158)
+resource_name = "furnace"
+texture = ExtResource("8_hmqmx")
+texture_region_size = Vector2i(230, 166)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kkbap"]
-resource_name = "ruined_building"
-texture = ExtResource("15_khw20")
-texture_region_size = Vector2i(367, 231)
+resource_name = "gate"
+texture = ExtResource("9_ar5rc")
+texture_region_size = Vector2i(168, 118)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pfvra"]
-resource_name = "scrap_wall"
-texture = ExtResource("16_pwhn5")
-texture_region_size = Vector2i(179, 116)
+resource_name = "generator"
+texture = ExtResource("10_8e4wt")
+texture_region_size = Vector2i(197, 131)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sn64b"]
-resource_name = "shotgun_turret"
-texture = ExtResource("17_fxaak")
-texture_region_size = Vector2i(120, 114)
+resource_name = "lab_station"
+texture = ExtResource("11_gv364")
+texture_region_size = Vector2i(198, 141)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_adsj2"]
-resource_name = "spike_trap"
-texture = ExtResource("18_7wejx")
-texture_region_size = Vector2i(134, 91)
+resource_name = "power_pole"
+texture = ExtResource("12_khw20")
+texture_region_size = Vector2i(137, 170)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cpndb"]
-resource_name = "spotlight"
-texture = ExtResource("19_qk4p0")
-texture_region_size = Vector2i(78, 115)
+resource_name = "field"
+texture = ExtResource("13_pwhn5")
+texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fgr6c"]
-resource_name = "wire_fence"
-texture = ExtResource("20_op2gp")
-texture_region_size = Vector2i(188, 116)
+resource_name = "rubble"
+texture = ExtResource("14_fxaak")
+texture_region_size = Vector2i(324, 158)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15bos"]
-resource_name = "workbench"
-texture = ExtResource("21_c4t4l")
-texture_region_size = Vector2i(210, 151)
+resource_name = "ruined_building"
+texture = ExtResource("15_7wejx")
+texture_region_size = Vector2i(367, 231)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mqnw"]
-resource_name = "wrecked_car"
-texture = ExtResource("22_aysja")
-texture_region_size = Vector2i(288, 156)
+resource_name = "scrap_wall"
+texture = ExtResource("16_qk4p0")
+texture_region_size = Vector2i(179, 116)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3goe"]
-resource_name = "lab_floor"
-texture = ExtResource("23_e3p1j")
-texture_region_size = Vector2i(64, 64)
+resource_name = "shotgun_turret"
+texture = ExtResource("17_op2gp")
+texture_region_size = Vector2i(120, 114)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_04df4"]
-resource_name = "cracked_road"
-texture = ExtResource("24_x7mfu")
-texture_region_size = Vector2i(64, 64)
+resource_name = "spike_trap"
+texture = ExtResource("18_c4t4l")
+texture_region_size = Vector2i(134, 91)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wv68d"]
-resource_name = "lab_floor_cable"
-texture = ExtResource("25_lftk2")
-texture_region_size = Vector2i(64, 64)
+resource_name = "spotlight"
+texture = ExtResource("19_aysja")
+texture_region_size = Vector2i(78, 115)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6tt2e"]
-resource_name = "lab_floor_grate"
-texture = ExtResource("26_27i3v")
-texture_region_size = Vector2i(64, 64)
+resource_name = "wire_fence"
+texture = ExtResource("20_e3p1j")
+texture_region_size = Vector2i(188, 116)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrgm0"]
-resource_name = "bunker_bed"
-texture = ExtResource("27_54760")
-texture_region_size = Vector2i(111, 73)
+resource_name = "workbench"
+texture = ExtResource("21_x7mfu")
+texture_region_size = Vector2i(210, 151)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_da5ki"]
-resource_name = "bunker_entrance"
-texture = ExtResource("28_7il00")
-texture_region_size = Vector2i(173, 123)
+resource_name = "wrecked_car"
+texture = ExtResource("22_lftk2")
+texture_region_size = Vector2i(288, 156)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jeqpb"]
-resource_name = "lab_desk"
-texture = ExtResource("29_22hd3")
-texture_region_size = Vector2i(99, 63)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4p47e"]
-resource_name = "lab_wall_panel"
-texture = ExtResource("30_1eq6t")
-texture_region_size = Vector2i(85, 86)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4hndc"]
-resource_name = "lab_wall_pipes"
-texture = ExtResource("31_y6lep")
-texture_region_size = Vector2i(85, 86)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ldvk"]
-resource_name = "lab_wall_warning"
-texture = ExtResource("32_bqqb8")
-texture_region_size = Vector2i(85, 86)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kg21e"]
-resource_name = "metal_chair"
-texture = ExtResource("33_vku5l")
-texture_region_size = Vector2i(54, 62)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ryyka"]
-resource_name = "metal_shelf"
-texture = ExtResource("34_sa2kp")
-texture_region_size = Vector2i(91, 87)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_flpf5"]
-resource_name = "dark_ground"
-texture = ExtResource("35_12utr")
+resource_name = "lab_floor"
+texture = ExtResource("23_27i3v")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4p47e"]
+resource_name = "cracked_road"
+texture = ExtResource("24_54760")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4hndc"]
+resource_name = "lab_floor_cable"
+texture = ExtResource("25_7il00")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ldvk"]
+resource_name = "lab_floor_grate"
+texture = ExtResource("26_22hd3")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kg21e"]
+resource_name = "bunker_bed"
+texture = ExtResource("27_1eq6t")
+texture_region_size = Vector2i(111, 73)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ryyka"]
+resource_name = "bunker_entrance"
+texture = ExtResource("28_y6lep")
+texture_region_size = Vector2i(173, 123)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_flpf5"]
+resource_name = "lab_desk"
+texture = ExtResource("29_bqqb8")
+texture_region_size = Vector2i(99, 63)
+0:0/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1okas"]
-resource_name = "rusty_locker"
-texture = ExtResource("36_lrv8v")
-texture_region_size = Vector2i(65, 102)
+resource_name = "lab_wall_panel"
+texture = ExtResource("30_vku5l")
+texture_region_size = Vector2i(85, 86)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rms5o"]
-resource_name = "rusty_table"
-texture = ExtResource("37_ipj27")
-texture_region_size = Vector2i(99, 65)
+resource_name = "lab_wall_pipes"
+texture = ExtResource("31_sa2kp")
+texture_region_size = Vector2i(85, 86)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5i22f"]
-resource_name = "supercomputer"
-texture = ExtResource("38_nh77t")
-texture_region_size = Vector2i(179, 122)
+resource_name = "lab_wall_warning"
+texture = ExtResource("32_12utr")
+texture_region_size = Vector2i(85, 86)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ert2"]
-resource_name = "supercomputer_screen_frame_00"
-texture = ExtResource("39_dswg2")
-texture_region_size = Vector2i(64, 48)
+resource_name = "metal_chair"
+texture = ExtResource("33_lrv8v")
+texture_region_size = Vector2i(54, 62)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g8gwx"]
-resource_name = "supercomputer_screen_frame_01"
-texture = ExtResource("40_dr2at")
-texture_region_size = Vector2i(64, 48)
+resource_name = "metal_shelf"
+texture = ExtResource("34_ipj27")
+texture_region_size = Vector2i(91, 87)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bh240"]
-resource_name = "supercomputer_screen_frame_02"
-texture = ExtResource("41_en31u")
-texture_region_size = Vector2i(64, 48)
+resource_name = "dark_ground"
+texture = ExtResource("35_nh77t")
+texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tyds6"]
-resource_name = "supercomputer_screen_frame_03"
-texture = ExtResource("42_s1qg6")
-texture_region_size = Vector2i(64, 48)
+resource_name = "rusty_locker"
+texture = ExtResource("36_dswg2")
+texture_region_size = Vector2i(65, 102)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mvbdb"]
-resource_name = "supercomputer_screen_frame_04"
-texture = ExtResource("43_04mwq")
-texture_region_size = Vector2i(64, 48)
+resource_name = "rusty_table"
+texture = ExtResource("37_dr2at")
+texture_region_size = Vector2i(99, 65)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wjvc"]
-resource_name = "supercomputer_screen_frame_05"
-texture = ExtResource("44_pdto1")
-texture_region_size = Vector2i(64, 48)
+resource_name = "supercomputer"
+texture = ExtResource("38_en31u")
+texture_region_size = Vector2i(179, 122)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52hdy"]
-resource_name = "supercomputer_screen_frame_06"
-texture = ExtResource("45_n735v")
+resource_name = "supercomputer_screen_frame_00"
+texture = ExtResource("39_s1qg6")
 texture_region_size = Vector2i(64, 48)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1alce"]
-resource_name = "night_ground"
-texture = ExtResource("46_t16ey")
-texture_region_size = Vector2i(64, 64)
+resource_name = "supercomputer_screen_frame_01"
+texture = ExtResource("40_04mwq")
+texture_region_size = Vector2i(64, 48)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cii65"]
-resource_name = "supercomputer_screen_frame_07"
-texture = ExtResource("47_sjrh0")
+resource_name = "supercomputer_screen_frame_02"
+texture = ExtResource("41_pdto1")
 texture_region_size = Vector2i(64, 48)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tetcb"]
-resource_name = "animal_pen"
-texture = ExtResource("48_uya5i")
-texture_region_size = Vector2i(253, 170)
+resource_name = "supercomputer_screen_frame_03"
+texture = ExtResource("42_n735v")
+texture_region_size = Vector2i(64, 48)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ff5x6"]
-resource_name = "barricade"
-texture = ExtResource("49_qpc3u")
-texture_region_size = Vector2i(190, 119)
+resource_name = "supercomputer_screen_frame_04"
+texture = ExtResource("43_t16ey")
+texture_region_size = Vector2i(64, 48)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k72e6"]
-resource_name = "basic_turret"
-texture = ExtResource("50_kqjn7")
-texture_region_size = Vector2i(138, 104)
+resource_name = "supercomputer_screen_frame_05"
+texture = ExtResource("44_sjrh0")
+texture_region_size = Vector2i(64, 48)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ilp3l"]
+resource_name = "supercomputer_screen_frame_06"
+texture = ExtResource("45_uya5i")
+texture_region_size = Vector2i(64, 48)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa1m6"]
+resource_name = "night_ground"
+texture = ExtResource("46_qpc3u")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3c2t"]
+resource_name = "supercomputer_screen_frame_07"
+texture = ExtResource("47_kqjn7")
+texture_region_size = Vector2i(64, 48)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iyq4s"]
+resource_name = "stone_road_atlas"
+texture = ExtResource("48_e8557")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2tqlt"]
+resource_name = "mountain_atlas"
+texture = ExtResource("49_7eqmn")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwsgq"]
+resource_name = "nature_atlas"
+texture = ExtResource("50_3s5ka")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dug20"]
+resource_name = "animal_pen"
+texture = ExtResource("51_sxtor")
+texture_region_size = Vector2i(253, 170)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qhqcd"]
+resource_name = "barricade"
+texture = ExtResource("52_svq3x")
+texture_region_size = Vector2i(190, 119)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_frtke"]
+resource_name = "basic_turret"
+texture = ExtResource("53_slomk")
+texture_region_size = Vector2i(138, 104)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_awb02"]
 resource_name = "battery"
-texture = ExtResource("51_e8557")
+texture = ExtResource("54_rfbgc")
 texture_region_size = Vector2i(146, 116)
 0:0/0 = 0
 
 [resource]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_7eqmn")
-sources/1 = SubResource("TileSetAtlasSource_3s5ka")
-sources/2 = SubResource("TileSetAtlasSource_u5q05")
-sources/3 = SubResource("TileSetAtlasSource_04df4")
-sources/4 = SubResource("TileSetAtlasSource_flpf5")
-sources/5 = SubResource("TileSetAtlasSource_1alce")
-sources/6 = SubResource("TileSetAtlasSource_tetcb")
-sources/7 = SubResource("TileSetAtlasSource_ff5x6")
-sources/8 = SubResource("TileSetAtlasSource_k72e6")
-sources/9 = SubResource("TileSetAtlasSource_ilp3l")
-sources/10 = SubResource("TileSetAtlasSource_sxtor")
-sources/11 = SubResource("TileSetAtlasSource_svq3x")
-sources/12 = SubResource("TileSetAtlasSource_slomk")
-sources/13 = SubResource("TileSetAtlasSource_rfbgc")
-sources/14 = SubResource("TileSetAtlasSource_s1b4x")
-sources/15 = SubResource("TileSetAtlasSource_pqli7")
-sources/16 = SubResource("TileSetAtlasSource_fuxcs")
-sources/17 = SubResource("TileSetAtlasSource_llogh")
-sources/18 = SubResource("TileSetAtlasSource_5p44f")
-sources/19 = SubResource("TileSetAtlasSource_uuatp")
-sources/20 = SubResource("TileSetAtlasSource_78uq7")
-sources/21 = SubResource("TileSetAtlasSource_kkbap")
-sources/22 = SubResource("TileSetAtlasSource_pfvra")
-sources/23 = SubResource("TileSetAtlasSource_sn64b")
-sources/24 = SubResource("TileSetAtlasSource_adsj2")
-sources/25 = SubResource("TileSetAtlasSource_cpndb")
-sources/26 = SubResource("TileSetAtlasSource_fgr6c")
-sources/27 = SubResource("TileSetAtlasSource_15bos")
-sources/28 = SubResource("TileSetAtlasSource_1mqnw")
-sources/29 = SubResource("TileSetAtlasSource_g3goe")
-sources/30 = SubResource("TileSetAtlasSource_wv68d")
-sources/31 = SubResource("TileSetAtlasSource_6tt2e")
-sources/32 = SubResource("TileSetAtlasSource_hrgm0")
-sources/33 = SubResource("TileSetAtlasSource_da5ki")
-sources/34 = SubResource("TileSetAtlasSource_jeqpb")
-sources/35 = SubResource("TileSetAtlasSource_4p47e")
-sources/36 = SubResource("TileSetAtlasSource_4hndc")
-sources/37 = SubResource("TileSetAtlasSource_2ldvk")
-sources/38 = SubResource("TileSetAtlasSource_kg21e")
-sources/39 = SubResource("TileSetAtlasSource_ryyka")
-sources/40 = SubResource("TileSetAtlasSource_1okas")
-sources/41 = SubResource("TileSetAtlasSource_rms5o")
-sources/42 = SubResource("TileSetAtlasSource_5i22f")
-sources/43 = SubResource("TileSetAtlasSource_8ert2")
-sources/44 = SubResource("TileSetAtlasSource_g8gwx")
-sources/45 = SubResource("TileSetAtlasSource_bh240")
-sources/46 = SubResource("TileSetAtlasSource_tyds6")
-sources/47 = SubResource("TileSetAtlasSource_mvbdb")
-sources/48 = SubResource("TileSetAtlasSource_7wjvc")
-sources/49 = SubResource("TileSetAtlasSource_52hdy")
-sources/50 = SubResource("TileSetAtlasSource_cii65")
+sources/0 = SubResource("TileSetAtlasSource_s1b4x")
+sources/1 = SubResource("TileSetAtlasSource_pqli7")
+sources/2 = SubResource("TileSetAtlasSource_cpndb")
+sources/3 = SubResource("TileSetAtlasSource_4p47e")
+sources/4 = SubResource("TileSetAtlasSource_bh240")
+sources/5 = SubResource("TileSetAtlasSource_sa1m6")
+sources/6 = SubResource("TileSetAtlasSource_dug20")
+sources/7 = SubResource("TileSetAtlasSource_qhqcd")
+sources/8 = SubResource("TileSetAtlasSource_frtke")
+sources/9 = SubResource("TileSetAtlasSource_awb02")
+sources/10 = SubResource("TileSetAtlasSource_fuxcs")
+sources/11 = SubResource("TileSetAtlasSource_llogh")
+sources/12 = SubResource("TileSetAtlasSource_5p44f")
+sources/13 = SubResource("TileSetAtlasSource_uuatp")
+sources/14 = SubResource("TileSetAtlasSource_u5q05")
+sources/15 = SubResource("TileSetAtlasSource_78uq7")
+sources/16 = SubResource("TileSetAtlasSource_kkbap")
+sources/17 = SubResource("TileSetAtlasSource_pfvra")
+sources/18 = SubResource("TileSetAtlasSource_sn64b")
+sources/19 = SubResource("TileSetAtlasSource_adsj2")
+sources/20 = SubResource("TileSetAtlasSource_fgr6c")
+sources/21 = SubResource("TileSetAtlasSource_15bos")
+sources/22 = SubResource("TileSetAtlasSource_1mqnw")
+sources/23 = SubResource("TileSetAtlasSource_g3goe")
+sources/24 = SubResource("TileSetAtlasSource_04df4")
+sources/25 = SubResource("TileSetAtlasSource_wv68d")
+sources/26 = SubResource("TileSetAtlasSource_6tt2e")
+sources/27 = SubResource("TileSetAtlasSource_hrgm0")
+sources/28 = SubResource("TileSetAtlasSource_da5ki")
+sources/29 = SubResource("TileSetAtlasSource_jeqpb")
+sources/30 = SubResource("TileSetAtlasSource_4hndc")
+sources/31 = SubResource("TileSetAtlasSource_2ldvk")
+sources/32 = SubResource("TileSetAtlasSource_kg21e")
+sources/33 = SubResource("TileSetAtlasSource_ryyka")
+sources/34 = SubResource("TileSetAtlasSource_flpf5")
+sources/35 = SubResource("TileSetAtlasSource_1okas")
+sources/36 = SubResource("TileSetAtlasSource_rms5o")
+sources/37 = SubResource("TileSetAtlasSource_5i22f")
+sources/38 = SubResource("TileSetAtlasSource_8ert2")
+sources/39 = SubResource("TileSetAtlasSource_g8gwx")
+sources/40 = SubResource("TileSetAtlasSource_tyds6")
+sources/41 = SubResource("TileSetAtlasSource_mvbdb")
+sources/42 = SubResource("TileSetAtlasSource_7wjvc")
+sources/43 = SubResource("TileSetAtlasSource_52hdy")
+sources/44 = SubResource("TileSetAtlasSource_1alce")
+sources/45 = SubResource("TileSetAtlasSource_cii65")
+sources/46 = SubResource("TileSetAtlasSource_tetcb")
+sources/47 = SubResource("TileSetAtlasSource_ff5x6")
+sources/48 = SubResource("TileSetAtlasSource_k72e6")
+sources/49 = SubResource("TileSetAtlasSource_ilp3l")
+sources/50 = SubResource("TileSetAtlasSource_s3c2t")
+sources/51 = SubResource("TileSetAtlasSource_iyq4s")
+sources/52 = SubResource("TileSetAtlasSource_2tqlt")
+sources/53 = SubResource("TileSetAtlasSource_bwsgq")

@@ -26,3 +26,4 @@
 - Added generated map objects, buildings, defense pieces, production facilities, wreckage, and city props as paintable TileSet sources, plus empty paint layers for manual scene editing.
 - Rewired `BaseHub` to use a single editor-created `TileMap` node with the shared complete TileSet and named internal layers for manual map painting.
 - Added a bunker/lab interior art kit with entrance, lab floor variants, wall panels, supercomputer, animated screen frames, bed, tables, locker, shelf, and chair assets.
+- Added natural environment atlas sheets for stone roads, mountain terrain, trees, shrubs, flowers, rocks, and wasteland ground props, with TileSet atlas-source support.

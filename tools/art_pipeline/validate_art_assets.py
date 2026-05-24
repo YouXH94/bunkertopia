@@ -47,6 +47,9 @@ def collect_paths(manifest: dict) -> list[str]:
         for value in manifest.get(section, {}).values():
             if isinstance(value, dict) and value.get("path"):
                 paths.append(str(value["path"]))
+    for value in manifest.get("atlases", {}).values():
+        if isinstance(value, dict) and value.get("path"):
+            paths.append(str(value["path"]))
     for value in manifest.get("characters", {}).values():
         if isinstance(value, dict) and value.get("sheet"):
             paths.append(str(value["sheet"]))

@@ -38,6 +38,34 @@ const PRIORITY_TILE_ASSETS := [
 	{"id": "wire_fence", "path": "res://assets/art/objects/generated/wire_fence.png"},
 	{"id": "workbench", "path": "res://assets/art/objects/generated/workbench.png"},
 	{"id": "wrecked_car", "path": "res://assets/art/objects/generated/wrecked_car.png"},
+	{"id": "lab_floor", "path": "res://assets/art/tiles/generated/lab_floor.png"},
+	{"id": "lab_floor_cable", "path": "res://assets/art/tiles/generated/lab_floor_cable.png"},
+	{"id": "lab_floor_grate", "path": "res://assets/art/tiles/generated/lab_floor_grate.png"},
+	{"id": "bunker_bed", "path": "res://assets/art/objects/generated/bunker_bed.png"},
+	{"id": "bunker_entrance", "path": "res://assets/art/objects/generated/bunker_entrance.png"},
+	{"id": "lab_desk", "path": "res://assets/art/objects/generated/lab_desk.png"},
+	{"id": "lab_wall_panel", "path": "res://assets/art/objects/generated/lab_wall_panel.png"},
+	{"id": "lab_wall_pipes", "path": "res://assets/art/objects/generated/lab_wall_pipes.png"},
+	{"id": "lab_wall_warning", "path": "res://assets/art/objects/generated/lab_wall_warning.png"},
+	{"id": "metal_chair", "path": "res://assets/art/objects/generated/metal_chair.png"},
+	{"id": "metal_shelf", "path": "res://assets/art/objects/generated/metal_shelf.png"},
+	{"id": "rusty_locker", "path": "res://assets/art/objects/generated/rusty_locker.png"},
+	{"id": "rusty_table", "path": "res://assets/art/objects/generated/rusty_table.png"},
+	{"id": "supercomputer", "path": "res://assets/art/objects/generated/supercomputer.png"},
+	{"id": "supercomputer_screen_frame_00", "path": "res://assets/art/objects/generated/supercomputer_screen_frame_00.png"},
+	{"id": "supercomputer_screen_frame_01", "path": "res://assets/art/objects/generated/supercomputer_screen_frame_01.png"},
+	{"id": "supercomputer_screen_frame_02", "path": "res://assets/art/objects/generated/supercomputer_screen_frame_02.png"},
+	{"id": "supercomputer_screen_frame_03", "path": "res://assets/art/objects/generated/supercomputer_screen_frame_03.png"},
+	{"id": "supercomputer_screen_frame_04", "path": "res://assets/art/objects/generated/supercomputer_screen_frame_04.png"},
+	{"id": "supercomputer_screen_frame_05", "path": "res://assets/art/objects/generated/supercomputer_screen_frame_05.png"},
+	{"id": "supercomputer_screen_frame_06", "path": "res://assets/art/objects/generated/supercomputer_screen_frame_06.png"},
+	{"id": "supercomputer_screen_frame_07", "path": "res://assets/art/objects/generated/supercomputer_screen_frame_07.png"},
+]
+
+const ATLAS_TILE_ASSETS := [
+	{"id": "stone_road_atlas", "path": "res://assets/art/tiles/generated/stone_road_atlas.png", "tile_size": [64, 64], "columns": 4, "rows": 4},
+	{"id": "mountain_atlas", "path": "res://assets/art/tiles/generated/mountain_atlas.png", "tile_size": [64, 64], "columns": 4, "rows": 3},
+	{"id": "nature_atlas", "path": "res://assets/art/tiles/generated/nature_atlas.png", "tile_size": [64, 64], "columns": 5, "rows": 4},
 ]
 
 
@@ -57,8 +85,8 @@ func _init() -> void:
 		var source := TileSetAtlasSource.new()
 		source.resource_name = str(asset["id"])
 		source.texture = texture
-		source.texture_region_size = texture.get_size()
-		source.create_tile(Vector2i.ZERO)
+		source.texture_region_size = _texture_region_size(asset, texture)
+		_create_tiles(source, asset, texture)
 		tile_set.add_source(source, i)
 
 	var error := ResourceSaver.save(tile_set, TILESET_PATH)
@@ -71,6 +99,7 @@ func _init() -> void:
 
 func _collect_tile_assets() -> Array:
 	var assets: Array = PRIORITY_TILE_ASSETS.duplicate(true)
+	assets.append_array(ATLAS_TILE_ASSETS.duplicate(true))
 	var seen := {}
 	for asset in assets:
 		seen[str(asset["path"])] = true
@@ -93,3 +122,24 @@ func _collect_tile_assets() -> Array:
 				"path": asset_path,
 			})
 	return assets
+
+
+func _texture_region_size(asset: Dictionary, texture: Texture2D) -> Vector2i:
+	if asset.has("tile_size"):
+		var size: Array = asset["tile_size"]
+		return Vector2i(int(size[0]), int(size[1]))
+	var texture_size := texture.get_size()
+	return Vector2i(int(texture_size.x), int(texture_size.y))
+
+
+func _create_tiles(source: TileSetAtlasSource, asset: Dictionary, texture: Texture2D) -> void:
+	if not asset.has("tile_size"):
+		source.create_tile(Vector2i.ZERO)
+		return
+	var tile_size: Vector2i = _texture_region_size(asset, texture)
+	var texture_size := texture.get_size()
+	var columns := int(asset.get("columns", int(texture_size.x) / tile_size.x))
+	var rows := int(asset.get("rows", int(texture_size.y) / tile_size.y))
+	for y in range(rows):
+		for x in range(columns):
+			source.create_tile(Vector2i(x, y))
