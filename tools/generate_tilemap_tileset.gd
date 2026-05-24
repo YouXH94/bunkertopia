@@ -3,7 +3,12 @@ extends SceneTree
 const TILESET_PATH := "res://assets/art/tiles/bunkertopia_tileset.tres"
 const TILE_SIZE := Vector2i(64, 64)
 
-const TILE_ASSETS := [
+const TILE_ASSET_DIRS := [
+	"res://assets/art/tiles/generated",
+	"res://assets/art/objects/generated",
+]
+
+const PRIORITY_TILE_ASSETS := [
 	{"id": "dirt", "path": "res://assets/art/tiles/generated/dirt.png"},
 	{"id": "bunker_floor", "path": "res://assets/art/tiles/generated/bunker_floor.png"},
 	{"id": "field", "path": "res://assets/art/tiles/generated/field.png"},
@@ -42,8 +47,9 @@ func _init() -> void:
 	tile_set.add_physics_layer()
 	tile_set.set_physics_layer_collision_layer(0, 1)
 
-	for i in range(TILE_ASSETS.size()):
-		var asset: Dictionary = TILE_ASSETS[i]
+	var tile_assets := _collect_tile_assets()
+	for i in range(tile_assets.size()):
+		var asset: Dictionary = tile_assets[i]
 		var texture := load(str(asset["path"]))
 		if texture == null:
 			push_warning("Missing tile asset: " + str(asset["path"]))
@@ -59,5 +65,31 @@ func _init() -> void:
 	if error != OK:
 		push_error("Failed to save TileSet: " + error_string(error))
 	else:
-		print("Saved TileSet with %d sources: %s" % [TILE_ASSETS.size(), TILESET_PATH])
+		print("Saved TileSet with %d sources: %s" % [tile_assets.size(), TILESET_PATH])
 	quit(error)
+
+
+func _collect_tile_assets() -> Array:
+	var assets: Array = PRIORITY_TILE_ASSETS.duplicate(true)
+	var seen := {}
+	for asset in assets:
+		seen[str(asset["path"])] = true
+	for dir_path in TILE_ASSET_DIRS:
+		var dir := DirAccess.open(dir_path)
+		if dir == null:
+			push_warning("Missing tile asset directory: " + dir_path)
+			continue
+		var file_names := dir.get_files()
+		file_names.sort()
+		for file_name in file_names:
+			if not file_name.ends_with(".png"):
+				continue
+			var asset_path: String = dir_path.path_join(file_name)
+			if bool(seen.get(asset_path, false)):
+				continue
+			var asset_id := file_name.get_basename()
+			assets.append({
+				"id": asset_id,
+				"path": asset_path,
+			})
+	return assets

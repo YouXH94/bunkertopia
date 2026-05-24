@@ -24,3 +24,4 @@
 - Added reusable art pipeline tools for ComfyUI health/submission, chroma-key cutout, atlas packing, AI-sheet extraction, and manifest validation.
 - Migrated base, city, and night defense terrain to editable Godot `TileMapLayer` nodes using a shared `bunkertopia_tileset.tres`, so map layers and tile collisions can be configured manually in the editor.
 - Added generated map objects, buildings, defense pieces, production facilities, wreckage, and city props as paintable TileSet sources, plus empty paint layers for manual scene editing.
+- Rewired `BaseHub` to use a single editor-created `TileMap` node with the shared complete TileSet and named internal layers for manual map painting.
