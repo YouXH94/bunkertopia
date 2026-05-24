@@ -125,11 +125,21 @@ func _update_facing(input_vector: Vector2) -> void:
 		return
 	if abs(input_vector.x) > abs(input_vector.y):
 		facing = "side"
-		sprite.flip_h = input_vector.x < 0
+		_apply_side_flip(input_vector.x)
 	elif input_vector.y < 0:
 		facing = "up"
+		sprite.flip_h = false
 	else:
 		facing = "down"
+		sprite.flip_h = false
+
+
+func _apply_side_flip(horizontal: float) -> void:
+	var source_facing := ArtRegistry.character_side_facing("scientist")
+	if source_facing == "left":
+		sprite.flip_h = horizontal > 0
+	else:
+		sprite.flip_h = horizontal < 0
 
 
 func _update_animation(delta: float, moving: bool) -> void:

@@ -75,6 +75,7 @@
         0,
         -12
       ],
+      "side_facing": "right",
       "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
       "style": "ai_target_preview"
     },
@@ -145,6 +146,7 @@
         0,
         -12
       ],
+      "side_facing": "left",
       "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
       "style": "ai_target_preview"
     },
@@ -215,6 +217,7 @@
         0,
         -12
       ],
+      "side_facing": "left",
       "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
       "style": "ai_target_preview"
     },
@@ -285,6 +288,7 @@
         0,
         -12
       ],
+      "side_facing": "left",
       "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
       "style": "ai_target_preview"
     },
@@ -355,6 +359,7 @@
         0,
         -12
       ],
+      "side_facing": "left",
       "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
       "style": "ai_target_preview"
     },
@@ -425,6 +430,7 @@
         0,
         -8
       ],
+      "side_facing": "left",
       "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
       "style": "ai_target_preview"
     },
@@ -495,6 +501,7 @@
         0,
         -12
       ],
+      "side_facing": "left",
       "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
       "style": "ai_target_preview"
     },
@@ -565,6 +572,7 @@
         0,
         -12
       ],
+      "side_facing": "left",
       "source": "res://assets/art/source/generated_raw/ai_target_sprite_sheet.png",
       "style": "ai_target_preview"
     }

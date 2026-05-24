@@ -38,6 +38,10 @@ func character_frame_size(character_id: String) -> Vector2i:
 	return Vector2i(int(size[0]), int(size[1]))
 
 
+func character_side_facing(character_id: String) -> String:
+	return str(character_data(character_id).get("side_facing", "right"))
+
+
 func character_animation(character_id: String, animation_name: String) -> Dictionary:
 	var animations: Dictionary = character_data(character_id).get("animations", {})
 	if animations.has(animation_name):

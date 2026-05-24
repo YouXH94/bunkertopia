@@ -164,6 +164,7 @@ def build_character(source: Image.Image, character_id: str, front_key: str, side
         "frame_size": [FRAME, FRAME],
         "animations": ANIMATIONS,
         "offset": [0, -12],
+        "side_facing": "right" if character_id == "scientist" else "left",
         "source": res(SOURCE),
         "style": "ai_target_preview",
     }
@@ -181,7 +182,7 @@ def build_crawler(source: Image.Image) -> dict:
     path = CHAR_DIR / "crawler_sheet.png"
     sheet = clean_transparency(sheet)
     sheet.save(path)
-    return {"sheet": res(path), "frame_size": [FRAME, FRAME], "animations": ANIMATIONS, "offset": [0, -8], "source": res(SOURCE), "style": "ai_target_preview"}
+    return {"sheet": res(path), "frame_size": [FRAME, FRAME], "animations": ANIMATIONS, "offset": [0, -8], "side_facing": "left", "source": res(SOURCE), "style": "ai_target_preview"}
 
 
 def build_objects(source: Image.Image) -> dict:
