@@ -1,48 +1,238 @@
 [gd_resource type="TileSet" format=3]
 
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/dirt.png" id="1_0m7ki"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/bunker_floor.png" id="2_ta3o7"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/field.png" id="3_kr12y"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/cracked_road.png" id="4_2r8uj"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/dark_ground.png" id="5_jk245"]
-[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/night_ground.png" id="6_tmgly"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/dirt.png" id="1_rtkwi"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/bunker_floor.png" id="2_sx2me"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/bunker_core.png" id="3_yyfhq"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/container.png" id="4_ncwke"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/crash_plane.png" id="5_56rg5"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/farm_plot.png" id="6_ndnym"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/flame_trap.png" id="7_bxwd6"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/furnace.png" id="8_oe4vi"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/gate.png" id="9_nv4sy"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/generator.png" id="10_immi1"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/lab_station.png" id="11_bgywj"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/power_pole.png" id="12_rpn62"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/field.png" id="13_d40vn"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/rubble.png" id="14_253mb"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/ruined_building.png" id="15_o3hsx"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/scrap_wall.png" id="16_g3rwi"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/shotgun_turret.png" id="17_6rxop"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/spike_trap.png" id="18_qcaq2"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/spotlight.png" id="19_jjfxp"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/wire_fence.png" id="20_sb1a3"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/workbench.png" id="21_7i2kx"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/wrecked_car.png" id="22_rlbng"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/cracked_road.png" id="23_tesxr"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/dark_ground.png" id="24_0x3lv"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/generated/night_ground.png" id="25_dnsyr"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/animal_pen.png" id="26_67un8"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/barricade.png" id="27_51i1s"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/basic_turret.png" id="28_4o2mb"]
+[ext_resource type="Texture2D" path="res://assets/art/objects/generated/battery.png" id="29_fuwdx"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gwfkw"]
-texture = ExtResource("1_0m7ki")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgymg"]
+resource_name = "dirt"
+texture = ExtResource("1_rtkwi")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trmbt"]
-texture = ExtResource("2_ta3o7")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bpgx"]
+resource_name = "bunker_floor"
+texture = ExtResource("2_sx2me")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g388t"]
-texture = ExtResource("3_kr12y")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_306s3"]
+resource_name = "bunker_core"
+texture = ExtResource("3_yyfhq")
+texture_region_size = Vector2i(272, 183)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmqmx"]
+resource_name = "container"
+texture = ExtResource("4_ncwke")
+texture_region_size = Vector2i(144, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ar5rc"]
+resource_name = "crash_plane"
+texture = ExtResource("5_56rg5")
+texture_region_size = Vector2i(348, 251)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8e4wt"]
+resource_name = "farm_plot"
+texture = ExtResource("6_ndnym")
+texture_region_size = Vector2i(226, 167)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gv364"]
+resource_name = "flame_trap"
+texture = ExtResource("7_bxwd6")
+texture_region_size = Vector2i(137, 119)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_khw20"]
+resource_name = "furnace"
+texture = ExtResource("8_oe4vi")
+texture_region_size = Vector2i(230, 166)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pwhn5"]
+resource_name = "gate"
+texture = ExtResource("9_nv4sy")
+texture_region_size = Vector2i(168, 118)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fxaak"]
+resource_name = "generator"
+texture = ExtResource("10_immi1")
+texture_region_size = Vector2i(197, 131)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wejx"]
+resource_name = "lab_station"
+texture = ExtResource("11_bgywj")
+texture_region_size = Vector2i(198, 141)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qk4p0"]
+resource_name = "power_pole"
+texture = ExtResource("12_rpn62")
+texture_region_size = Vector2i(137, 170)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_op2gp"]
+resource_name = "field"
+texture = ExtResource("13_d40vn")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oe1fe"]
-texture = ExtResource("4_2r8uj")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c4t4l"]
+resource_name = "rubble"
+texture = ExtResource("14_253mb")
+texture_region_size = Vector2i(324, 158)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aysja"]
+resource_name = "ruined_building"
+texture = ExtResource("15_o3hsx")
+texture_region_size = Vector2i(367, 231)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e3p1j"]
+resource_name = "scrap_wall"
+texture = ExtResource("16_g3rwi")
+texture_region_size = Vector2i(179, 116)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x7mfu"]
+resource_name = "shotgun_turret"
+texture = ExtResource("17_6rxop")
+texture_region_size = Vector2i(120, 114)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lftk2"]
+resource_name = "spike_trap"
+texture = ExtResource("18_qcaq2")
+texture_region_size = Vector2i(134, 91)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27i3v"]
+resource_name = "spotlight"
+texture = ExtResource("19_jjfxp")
+texture_region_size = Vector2i(78, 115)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_54760"]
+resource_name = "wire_fence"
+texture = ExtResource("20_sb1a3")
+texture_region_size = Vector2i(188, 116)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7il00"]
+resource_name = "workbench"
+texture = ExtResource("21_7i2kx")
+texture_region_size = Vector2i(210, 151)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_22hd3"]
+resource_name = "wrecked_car"
+texture = ExtResource("22_rlbng")
+texture_region_size = Vector2i(288, 156)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1eq6t"]
+resource_name = "cracked_road"
+texture = ExtResource("23_tesxr")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxe4v"]
-texture = ExtResource("5_jk245")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y6lep"]
+resource_name = "dark_ground"
+texture = ExtResource("24_0x3lv")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ktwv"]
-texture = ExtResource("6_tmgly")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bqqb8"]
+resource_name = "night_ground"
+texture = ExtResource("25_dnsyr")
 texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vku5l"]
+resource_name = "animal_pen"
+texture = ExtResource("26_67un8")
+texture_region_size = Vector2i(253, 170)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa2kp"]
+resource_name = "barricade"
+texture = ExtResource("27_51i1s")
+texture_region_size = Vector2i(190, 119)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_12utr"]
+resource_name = "basic_turret"
+texture = ExtResource("28_4o2mb")
+texture_region_size = Vector2i(138, 104)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lrv8v"]
+resource_name = "battery"
+texture = ExtResource("29_fuwdx")
+texture_region_size = Vector2i(146, 116)
 0:0/0 = 0
 
 [resource]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_gwfkw")
-sources/1 = SubResource("TileSetAtlasSource_trmbt")
-sources/2 = SubResource("TileSetAtlasSource_g388t")
-sources/3 = SubResource("TileSetAtlasSource_oe1fe")
-sources/4 = SubResource("TileSetAtlasSource_kxe4v")
-sources/5 = SubResource("TileSetAtlasSource_0ktwv")
+sources/0 = SubResource("TileSetAtlasSource_sgymg")
+sources/1 = SubResource("TileSetAtlasSource_4bpgx")
+sources/2 = SubResource("TileSetAtlasSource_op2gp")
+sources/3 = SubResource("TileSetAtlasSource_1eq6t")
+sources/4 = SubResource("TileSetAtlasSource_y6lep")
+sources/5 = SubResource("TileSetAtlasSource_bqqb8")
+sources/6 = SubResource("TileSetAtlasSource_vku5l")
+sources/7 = SubResource("TileSetAtlasSource_sa2kp")
+sources/8 = SubResource("TileSetAtlasSource_12utr")
+sources/9 = SubResource("TileSetAtlasSource_lrv8v")
+sources/10 = SubResource("TileSetAtlasSource_306s3")
+sources/11 = SubResource("TileSetAtlasSource_hmqmx")
+sources/12 = SubResource("TileSetAtlasSource_ar5rc")
+sources/13 = SubResource("TileSetAtlasSource_8e4wt")
+sources/14 = SubResource("TileSetAtlasSource_gv364")
+sources/15 = SubResource("TileSetAtlasSource_khw20")
+sources/16 = SubResource("TileSetAtlasSource_pwhn5")
+sources/17 = SubResource("TileSetAtlasSource_fxaak")
+sources/18 = SubResource("TileSetAtlasSource_7wejx")
+sources/19 = SubResource("TileSetAtlasSource_qk4p0")
+sources/20 = SubResource("TileSetAtlasSource_c4t4l")
+sources/21 = SubResource("TileSetAtlasSource_aysja")
+sources/22 = SubResource("TileSetAtlasSource_e3p1j")
+sources/23 = SubResource("TileSetAtlasSource_x7mfu")
+sources/24 = SubResource("TileSetAtlasSource_lftk2")
+sources/25 = SubResource("TileSetAtlasSource_27i3v")
+sources/26 = SubResource("TileSetAtlasSource_54760")
+sources/27 = SubResource("TileSetAtlasSource_7il00")
+sources/28 = SubResource("TileSetAtlasSource_22hd3")

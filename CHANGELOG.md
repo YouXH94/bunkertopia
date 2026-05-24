@@ -23,3 +23,4 @@
 - Added preview-matched AI source-sheet art pass for the core demo: scientist and zombie tile animation sheets, generated object cutouts, source/cutout folders, manifest-driven `ArtRegistry`, and runtime texture swaps for base, city, night defense, HUD, turrets, walls, and buildable defense objects.
 - Added reusable art pipeline tools for ComfyUI health/submission, chroma-key cutout, atlas packing, AI-sheet extraction, and manifest validation.
 - Migrated base, city, and night defense terrain to editable Godot `TileMapLayer` nodes using a shared `bunkertopia_tileset.tres`, so map layers and tile collisions can be configured manually in the editor.
+- Added generated map objects, buildings, defense pieces, production facilities, wreckage, and city props as paintable TileSet sources, plus empty paint layers for manual scene editing.
