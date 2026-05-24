@@ -1,0 +1,139 @@
+{
+  "research_projects": [
+    {
+      "id": "sample_analysis",
+      "name": "样本分析",
+      "description": "分离感染样本，给解药路线提供第一批有效数据。",
+      "cost": {"samples": 2, "power": 5},
+      "body_cost": {"sanity": 4},
+      "progress": 18,
+      "requires": []
+    },
+    {
+      "id": "stabilized_serum",
+      "name": "低温血清",
+      "description": "降低样本腐败速度，夜间尸潮后可保留更多研究价值。",
+      "cost": {"samples": 4, "power": 8, "fuel": 1},
+      "body_cost": {"sleep": 5, "sanity": 3},
+      "progress": 22,
+      "requires": ["sample_analysis"]
+    },
+    {
+      "id": "field_vaccine_hint",
+      "name": "疫苗线索",
+      "description": "把城市药房数据和地堡仪器结果拼成可验证的解药假说。",
+      "cost": {"samples": 6, "power": 10, "water": 4},
+      "body_cost": {"sanity": 8},
+      "progress": 30,
+      "requires": ["stabilized_serum"]
+    },
+    {
+      "id": "agro_protein",
+      "name": "基础农业",
+      "description": "改良农田和畜舍配方，让白天补给更可靠。",
+      "cost": {"food": 6, "water": 5, "power": 3},
+      "body_cost": {"sleep": 3},
+      "progress": 10,
+      "requires": []
+    },
+    {
+      "id": "reinforced_barricade",
+      "name": "路障加固",
+      "description": "把坠机残骸焊进围墙，提高夜晚防线承伤。",
+      "cost": {"parts": 10, "power": 4},
+      "body_cost": {"calories": 5},
+      "progress": 12,
+      "requires": []
+    }
+  ],
+  "build_options": [
+    {
+      "id": "repair_wall",
+      "name": "修补围墙",
+      "description": "用废金属和木料补强外墙。",
+      "cost": {"parts": 8},
+      "effect": {"wall_repair": 22}
+    },
+    {
+      "id": "load_turrets",
+      "name": "炮塔装填",
+      "description": "把库存弹药装入自动炮塔。",
+      "cost": {"ammo": 10},
+      "effect": {"turret_ready": 1}
+    },
+    {
+      "id": "prime_generator",
+      "name": "维护发电机",
+      "description": "消耗燃料让夜晚炮塔供电更稳定。",
+      "cost": {"fuel": 2},
+      "effect": {"power": 8}
+    }
+  ],
+  "city_containers": [
+    {
+      "id": "pharmacy",
+      "name": "废弃药房",
+      "loot": {"samples": [1, 3], "water": [1, 2]},
+      "risk": 5,
+      "event": "药房冷柜里还有半支变质疫苗，值得拿回实验室。"
+    },
+    {
+      "id": "market",
+      "name": "便利店货架",
+      "loot": {"food": [4, 9], "water": [2, 5], "fuel": [0, 1]},
+      "risk": 3,
+      "event": "货架后面有被撕开的急救包，还有几罐过期罐头。"
+    },
+    {
+      "id": "crash_cargo",
+      "name": "坠机货箱",
+      "loot": {"parts": [5, 10], "ammo": [4, 8], "fuel": [1, 2]},
+      "risk": 4,
+      "event": "坠机货箱的航空铝还能用，油味也还没散。"
+    },
+    {
+      "id": "police_car",
+      "name": "警车后备箱",
+      "loot": {"ammo": [6, 12], "samples": [0, 1]},
+      "risk": 7,
+      "event": "警车里传出敲击声，你抢在它爬出来前拿走了弹药。"
+    },
+    {
+      "id": "apartment",
+      "name": "倒塌公寓",
+      "loot": {"food": [2, 5], "parts": [3, 6], "water": [1, 2]},
+      "risk": 6,
+      "event": "公寓楼梯断了半截，背包变沉，呼吸也变重。"
+    },
+    {
+      "id": "lab_van",
+      "name": "流动实验车",
+      "loot": {"samples": [2, 4], "power": [1, 3], "parts": [2, 5]},
+      "risk": 8,
+      "event": "实验车记录仪还亮着，屏幕上停在感染曲线的峰值。"
+    }
+  ],
+  "zombies": [
+    {"id": "walker", "name": "行尸", "health": 22, "speed": 38, "damage": 4, "reward_samples": 1},
+    {"id": "runner", "name": "奔跑者", "health": 16, "speed": 66, "damage": 3, "reward_samples": 1},
+    {"id": "brute", "name": "臃肿体", "health": 48, "speed": 25, "damage": 9, "reward_samples": 2}
+  ],
+  "events": {
+    "opening": {
+      "title": "坠机后的清晨",
+      "body": "你从地堡观测窗看到城市上空还在冒烟。无线电只剩噪声，实验室备用电源勉强在线。今天必须搜集样本、补给和弹药，夜晚会很长。"
+    },
+    "horde": {
+      "title": "尸潮来袭",
+      "body": "太阳落下后，围墙外传来密集的撞击声。自动炮塔已经上线，发电机负载飙升。"
+    },
+    "base_damage": {
+      "title": "基地受损",
+      "body": "外墙传感器报警，金属支架正在变形。再不修补，下一波会直接冲击地堡门。"
+    },
+    "research": {
+      "title": "研究推进",
+      "body": "样本在显微镜下出现短暂稳定结构，解药曲线向前推进了一格。"
+    }
+  }
+}

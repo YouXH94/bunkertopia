@@ -1,0 +1,13 @@
+# Godot editor/import cache
+.godot/
+
+# Godot mono build output, if enabled later
+.mono/
+
+# OS/editor noise
+.DS_Store
+*.tmp
+*.log
+
+# Local runtime logs
+/tmp/
