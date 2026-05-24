@@ -41,23 +41,27 @@ ATLASES = {
         ],
     },
     "mountain_atlas": {
-        "source": RAW / "imagegen_mountain_atlas_source.png",
+        "source": RAW / "imagegen_mountain_connectable_atlas_source.png",
         "output": TILES / "mountain_atlas.png",
         "columns": 4,
-        "rows": 3,
+        "rows": 4,
         "tiles": [
-            "mountain_center",
-            "mountain_edge_top",
-            "mountain_edge_right",
-            "mountain_edge_bottom",
-            "mountain_edge_left",
-            "mountain_corner_top_right",
-            "mountain_corner_bottom_right",
-            "mountain_corner_bottom_left",
-            "mountain_corner_top_left",
-            "gravel_slope",
-            "cave_mouth",
-            "boulder_field",
+            "mountain_isolated",
+            "mountain_end_north",
+            "mountain_end_east",
+            "mountain_end_south",
+            "mountain_end_west",
+            "mountain_straight_ns",
+            "mountain_straight_ew",
+            "mountain_corner_ne",
+            "mountain_corner_es",
+            "mountain_corner_sw",
+            "mountain_corner_wn",
+            "mountain_t_nes",
+            "mountain_t_esw",
+            "mountain_t_swn",
+            "mountain_t_wne",
+            "mountain_cross",
         ],
     },
     "nature_atlas": {
@@ -135,10 +139,10 @@ def choose_grid_runs(image: Image.Image, columns: int, rows: int) -> tuple[list[
     return vertical, horizontal
 
 
-def extract_atlas(source_path: Path, output_path: Path, columns: int, rows: int) -> None:
+def extract_cells(source_path: Path, columns: int, rows: int) -> list[Image.Image]:
     source = Image.open(source_path).convert("RGBA")
     vertical, horizontal = choose_grid_runs(source, columns, rows)
-    atlas = Image.new("RGBA", (columns * TILE, rows * TILE), (0, 0, 0, 0))
+    cells: list[Image.Image] = []
     for row in range(rows):
         for column in range(columns):
             left = vertical[column][1] + 1
@@ -146,8 +150,17 @@ def extract_atlas(source_path: Path, output_path: Path, columns: int, rows: int)
             top = horizontal[row][1] + 1
             bottom = horizontal[row + 1][0]
             cell = source.crop((left, top, right, bottom)).resize((TILE, TILE), Image.Resampling.LANCZOS)
-            cell = cell.convert("RGBA")
-            atlas.alpha_composite(cell, (column * TILE, row * TILE))
+            cells.append(cell.convert("RGBA"))
+    return cells
+
+
+def extract_atlas(source_path: Path, output_path: Path, columns: int, rows: int) -> None:
+    cells = extract_cells(source_path, columns, rows)
+    atlas = Image.new("RGBA", (columns * TILE, rows * TILE), (0, 0, 0, 0))
+    for index, cell in enumerate(cells):
+        column = index % columns
+        row = index // columns
+        atlas.alpha_composite(cell, (column * TILE, row * TILE))
     output_path.parent.mkdir(parents=True, exist_ok=True)
     atlas.save(output_path)
 
@@ -170,7 +183,50 @@ def build_preview(outputs: list[Path]) -> Path:
     return path
 
 
-def update_manifest(preview: Path) -> None:
+def build_mountain_connectivity_preview(mountain_atlas_path: Path) -> Path:
+    atlas = Image.open(mountain_atlas_path).convert("RGBA")
+    tile_names = {
+        "iso": 0,
+        "n": 1,
+        "e": 2,
+        "s": 3,
+        "w": 4,
+        "ns": 5,
+        "ew": 6,
+        "ne": 7,
+        "es": 8,
+        "sw": 9,
+        "wn": 10,
+        "nes": 11,
+        "esw": 12,
+        "swn": 13,
+        "wne": 14,
+        "cross": 15,
+    }
+    layout = [
+        ["iso", "n", "n", "iso", "iso", "iso"],
+        ["e", "cross", "cross", "ew", "es", "iso"],
+        ["iso", "ns", "iso", "iso", "ns", "iso"],
+        ["e", "wne", "ew", "ew", "swn", "w"],
+        ["iso", "s", "iso", "iso", "s", "iso"],
+    ]
+    preview = Image.new("RGBA", (len(layout[0]) * TILE, len(layout) * TILE), (30, 29, 24, 255))
+    for row_index, row in enumerate(layout):
+        for column_index, tile_name in enumerate(row):
+            tile_index = tile_names[tile_name]
+            tile = atlas.crop((
+                (tile_index % 4) * TILE,
+                (tile_index // 4) * TILE,
+                (tile_index % 4 + 1) * TILE,
+                (tile_index // 4 + 1) * TILE,
+            ))
+            preview.alpha_composite(tile, (column_index * TILE, row_index * TILE))
+    path = RAW / "mountain_connectivity_preview.png"
+    preview.save(path)
+    return path
+
+
+def update_manifest(preview: Path, mountain_connectivity_preview: Path) -> None:
     if not MANIFEST.exists():
         return
     data = json.loads(MANIFEST.read_text(encoding="utf-8"))
@@ -189,6 +245,7 @@ def update_manifest(preview: Path) -> None:
                 "style": "imagegen_target_reference",
             }
     data.setdefault("previews", {})["nature_environment"] = res(preview)
+    data.setdefault("previews", {})["mountain_connectivity"] = res(mountain_connectivity_preview)
     MANIFEST.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
@@ -201,7 +258,8 @@ def main() -> None:
         extract_atlas(source, atlas["output"], atlas["columns"], atlas["rows"])
         outputs.append(atlas["output"])
     preview = build_preview(outputs)
-    update_manifest(preview)
+    mountain_preview = build_mountain_connectivity_preview(ATLASES["mountain_atlas"]["output"])
+    update_manifest(preview, mountain_preview)
     print("Extracted imagegen nature atlases: " + ", ".join(path.name for path in outputs))
 
 

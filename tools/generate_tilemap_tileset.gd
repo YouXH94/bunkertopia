@@ -64,7 +64,7 @@ const PRIORITY_TILE_ASSETS := [
 
 const ATLAS_TILE_ASSETS := [
 	{"id": "stone_road_atlas", "path": "res://assets/art/tiles/generated/stone_road_atlas.png", "tile_size": [64, 64], "columns": 4, "rows": 4},
-	{"id": "mountain_atlas", "path": "res://assets/art/tiles/generated/mountain_atlas.png", "tile_size": [64, 64], "columns": 4, "rows": 3},
+	{"id": "mountain_atlas", "path": "res://assets/art/tiles/generated/mountain_atlas.png", "tile_size": [64, 64], "columns": 4, "rows": 4},
 	{"id": "nature_atlas", "path": "res://assets/art/tiles/generated/nature_atlas.png", "tile_size": [64, 64], "columns": 5, "rows": 4},
 ]
 

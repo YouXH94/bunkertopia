@@ -1490,30 +1490,34 @@
     },
     "mountain_atlas": {
       "path": "res://assets/art/tiles/generated/mountain_atlas.png",
-      "source": "res://assets/art/source/generated_raw/imagegen_mountain_atlas_source.png",
+      "source": "res://assets/art/source/generated_raw/imagegen_mountain_connectable_atlas_source.png",
       "size": [
         256,
-        192
+        256
       ],
       "tile_size": [
         64,
         64
       ],
       "columns": 4,
-      "rows": 3,
+      "rows": 4,
       "tiles": [
-        "mountain_center",
-        "mountain_edge_top",
-        "mountain_edge_right",
-        "mountain_edge_bottom",
-        "mountain_edge_left",
-        "mountain_corner_top_right",
-        "mountain_corner_bottom_right",
-        "mountain_corner_bottom_left",
-        "mountain_corner_top_left",
-        "gravel_slope",
-        "cave_mouth",
-        "boulder_field"
+        "mountain_isolated",
+        "mountain_end_north",
+        "mountain_end_east",
+        "mountain_end_south",
+        "mountain_end_west",
+        "mountain_straight_ns",
+        "mountain_straight_ew",
+        "mountain_corner_ne",
+        "mountain_corner_es",
+        "mountain_corner_sw",
+        "mountain_corner_wn",
+        "mountain_t_nes",
+        "mountain_t_esw",
+        "mountain_t_swn",
+        "mountain_t_wne",
+        "mountain_cross"
       ],
       "style": "imagegen_target_reference"
     },
@@ -1556,6 +1560,7 @@
     }
   },
   "previews": {
-    "nature_environment": "res://assets/art/source/generated_raw/nature_environment_preview.png"
+    "nature_environment": "res://assets/art/source/generated_raw/nature_environment_preview.png",
+    "mountain_connectivity": "res://assets/art/source/generated_raw/mountain_connectivity_preview.png"
   }
 }
