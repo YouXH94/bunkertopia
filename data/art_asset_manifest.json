@@ -1456,6 +1456,16 @@
   },
   "atlases": {
     "stone_road_atlas": {
+      "path": "res://assets/art/tiles/generated/stone_road_atlas.png",
+      "source": "res://assets/art/source/generated_raw/imagegen_stone_road_atlas_source.png",
+      "size": [
+        256,
+        256
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
       "columns": 4,
       "rows": 4,
       "tiles": [
@@ -1476,18 +1486,19 @@
         "road_cross",
         "road_broken_plaza"
       ],
-      "path": "res://assets/art/tiles/generated/stone_road_atlas.png",
+      "style": "imagegen_target_reference"
+    },
+    "mountain_atlas": {
+      "path": "res://assets/art/tiles/generated/mountain_atlas.png",
+      "source": "res://assets/art/source/generated_raw/imagegen_mountain_atlas_source.png",
       "size": [
         256,
-        256
+        192
       ],
       "tile_size": [
         64,
         64
       ],
-      "style": "procedural_wasteland_nature"
-    },
-    "mountain_atlas": {
       "columns": 4,
       "rows": 3,
       "tiles": [
@@ -1504,18 +1515,19 @@
         "cave_mouth",
         "boulder_field"
       ],
-      "path": "res://assets/art/tiles/generated/mountain_atlas.png",
+      "style": "imagegen_target_reference"
+    },
+    "nature_atlas": {
+      "path": "res://assets/art/tiles/generated/nature_atlas.png",
+      "source": "res://assets/art/source/generated_raw/imagegen_nature_atlas_source.png",
       "size": [
-        256,
-        192
+        320,
+        256
       ],
       "tile_size": [
         64,
         64
       ],
-      "style": "procedural_wasteland_nature"
-    },
-    "nature_atlas": {
       "columns": 5,
       "rows": 4,
       "tiles": [
@@ -1540,16 +1552,7 @@
         "sapling",
         "scrub_patch"
       ],
-      "path": "res://assets/art/tiles/generated/nature_atlas.png",
-      "size": [
-        320,
-        256
-      ],
-      "tile_size": [
-        64,
-        64
-      ],
-      "style": "procedural_wasteland_nature"
+      "style": "imagegen_target_reference"
     }
   },
   "previews": {
